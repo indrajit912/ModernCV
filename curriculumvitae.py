@@ -46,8 +46,8 @@ class CurriculumVitae:
     default_address = ["Address line, Pin-XXXXXX", "Your State, Country"]
     default_mobile = "(+91) xxxx xxxxxx"
     default_email = "someone@somewhere.com"
-    default_photo_path = "indra.JPG"
-    default_photo_height = 90
+    default_photo = "indra.JPG"
+    default_photo_height = 70
     default_photo_thickness = 0.9 
 
     DEFAULT_SPACING = 0.25
@@ -57,7 +57,7 @@ class CurriculumVitae:
         first_name:str,
         family_name:str,
         title:str='Curriculum Vitae',
-        photo_path:str=None,
+        photo:str=None,
         address:list=None,
         mobile:str=None,
         email:str=None,
@@ -74,7 +74,7 @@ class CurriculumVitae:
         self._familyname = family_name
         self._title = title
 
-        self._photo_path = self.default_photo_path if photo_path is None else photo_path
+        self._photo = self.default_photo if photo is None else photo
         self._address = self.default_address if address is None else address
         self._mobile = self.default_mobile if mobile is None else mobile
         self._email = self.default_email if email is None else email
@@ -132,12 +132,12 @@ class CurriculumVitae:
         self._email = new
 
     @property
-    def photo_path(self):
-        return self._photo_path
+    def photo(self):
+        return self._photo
 
-    @photo_path.setter
+    @photo.setter
     def photo_path(self, p):
-        self._photo_path = p
+        self._photo = p
 
     @property
     def fontsize(self):
@@ -249,7 +249,7 @@ class CurriculumVitae:
             str(self._photo_height) + 
             r"pt][" +
             str(self._photo_thickness) +
-            "pt]{" + self._photo_path + r"}" + # (Pic Height, Thickness of the frame)
+            "pt]{" + self._photo + r"}" + # (Pic Height, Thickness of the frame)
             "\n\n"
         )
         preamble += arguments
