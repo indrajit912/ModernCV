@@ -2,6 +2,7 @@
 
 ### Python ###
 .sync/
+tex_dir/
 test_tex/
 templates/
 # Byte-compiled / optimized / DLL files

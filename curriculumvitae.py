@@ -6,6 +6,7 @@
 #
 
 from datetime import datetime
+from pathlib import Path
 
 __all__ = [
     "CurriculumVitae",
@@ -45,7 +46,9 @@ class CurriculumVitae:
     default_address = ["Address line, Pin-XXXXXX", "Your State, Country"]
     default_mobile = "(+91) xxxx xxxxxx"
     default_email = "someone@somewhere.com"
-    default_photo_path = "pictures/photo1.png"
+    default_photo_path = "indra.JPG"
+    default_photo_height = 90
+    default_photo_thickness = 0.9 
 
     DEFAULT_SPACING = 0.25
 
@@ -63,7 +66,9 @@ class CurriculumVitae:
         paper_size:str=None,
         font_family:str=None,
         style:str=None,
-        color:str=None
+        color:str=None,
+        photo_height:float=None,
+        photo_thickness:float=None
     ):
         self._firstname = first_name
         self._familyname = family_name
@@ -79,6 +84,8 @@ class CurriculumVitae:
         self._fontfamily = self.default_font_family if font_family is None else font_family
         self._style = self.default_style if style is None else style
         self._color = self.default_color if color is None else color
+        self._photo_height = self.default_photo_height if photo_height is None else photo_height
+        self._photo_thickness = self.default_photo_thickness if photo_thickness is None else photo_thickness
 
         self._preamble = self.get_preamble()
         self._body = self.get_body()
@@ -238,7 +245,11 @@ class CurriculumVitae:
             "\n" + 
             r"\email{" + self._email + r"}" + 
             "\n" + 
-            r"\photo[90pt][0.9pt]{" + self._photo_path + r"}" + 
+            r"\photo[" + 
+            str(self._photo_height) + 
+            r"pt][" +
+            str(self._photo_thickness) +
+            "pt]{" + self._photo_path + r"}" + # (Pic Height, Thickness of the frame)
             "\n\n"
         )
         preamble += arguments
@@ -273,6 +284,13 @@ class CurriculumVitae:
         cmd = self._cvitem(spacing=spacing, header=header, text=text)
 
         self._body += cmd
+
+    @staticmethod
+    def _section(title:str):
+        return "\n" + r"\section{" + title + r"}" + "\n"
+
+    def add_section(self, title:str):
+        self._body += self._section(title=title)
 
     @staticmethod
     def _cventry(
@@ -310,7 +328,7 @@ class CurriculumVitae:
         years:str,
         degree_or_job_title:str,
         institution_or_employer:str,
-        localization:str,
+        localization:str=None,
         grade:str=None,
         description:str=None,
         spacing:float=None
@@ -321,6 +339,7 @@ class CurriculumVitae:
         grade = '' if grade is None else grade
         description = '' if description is None else description
         spacing = self.DEFAULT_SPACING if spacing is None else spacing
+        localization = '' if localization is None else localization
 
         self._body += self._cventry(
             years=years,
@@ -408,6 +427,12 @@ class CurriculumVitae:
     def add_quote(self, quotation:str):
         self._body += self.quote(quotation=quotation)
 
+    
+    def create(self, path:Path=None):
+        path = Path.cwd() if path is None else Path(path)
+        with open(path / "cv.tex", 'w') as f:
+            f.write(self.text)
+
 
 
 #################### .sty files for `moderncv` ###############
@@ -450,9 +475,9 @@ class ModernCVColorStyFile:
             "\n"
         )
 
-    def create(self, path:str=None):
-        path = './' if path is None else str(path)
-        with open(path + self._styfilename, 'w') as f:
+    def create(self, path:Path=None):
+        path = Path.cwd() if path is None else Path(path)
+        with open(path / self._styfilename, 'w') as f:
             f.write(self._text)
 
 
@@ -569,9 +594,9 @@ class ModernCVStyleStyFile:
         )
 
     
-    def create(self, path:str=None):
-        path = './' if path is None else str(path)
-        with open(path + self._styfilename, 'w') as f:
+    def create(self, path:Path=None):
+        path = Path.cwd() if path is None else Path(path)
+        with open(path / self._styfilename, 'w') as f:
             f.write(self._text)
 
 
@@ -1725,9 +1750,9 @@ class TweakListStyFile:
         """
 
 
-    def create(self, path:str=None):
-        path = './' if path is None else str(path)
-        with open(path + self._styfilename, 'w') as f:
+    def create(self, path:Path=None):
+        path = Path.cwd() if path is None else Path(path)
+        with open(path / self._styfilename, 'w') as f:
             f.write(self._text)
 
 
@@ -2208,10 +2233,10 @@ class ModernCVClsFile:
 %% end of file `moderncv.cls'.
 """
     
-    def create(self, path:str=None):
-        path = './' if path is None else str(path)
+    def create(self, path:Path=None):
+        path = Path.cwd() if path is None else Path(path)
 
-        with open(path + self._filename, 'w') as f:
+        with open(path / self._filename, 'w') as f:
             f.write(self._text)
 
 
