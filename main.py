@@ -300,7 +300,7 @@ def create_config_file():
     }
 
     # Extra Curricular Activities
-    config['extra_curricular_activities'] = {
+    config['EXTRA_CURRICULAR_ACTIVITIES'] = {
         'swimming': 'yes',
         'dancing': 'no',
         'painting': 'yes',
@@ -463,7 +463,6 @@ def make_cv():
 def main():
     # CONFIG_FILE = Path(__file__).parent.resolve() / "CONFIG.txt"
 
-    # # read_config()
     # create_config_file()
     make_cv()
 
