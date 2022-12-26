@@ -457,7 +457,7 @@ def make_cv():
     photo_filename = cv.photo
     if photo_filename != 'indra.JPG':
         if (Path.cwd() / photo_filename).exists():
-            shutil.move(photo_filename, TEX_DIR)
+            shutil.copy(photo_filename, TEX_DIR)
         else:
             print(f"\nERROR: No photo with the name '{photo_filename}' found!\n")
             sys.exit()
