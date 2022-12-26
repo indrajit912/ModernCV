@@ -323,6 +323,30 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
         cv.add_cvitem(header="Operating System", text=os)
 
 
+    # Language
+    cv.add_section(title="Languages")
+    beng = check_none(config['BENGALI'])
+    if beng:
+        cv.add_cvitem(header="Bengali", text=beng)
+
+    eng = check_none(config['ENGLISH'])
+    if eng:
+        cv.add_cvitem(header="English", text=eng)
+    
+    hin = check_none(config['HINDI'])
+    if hin:
+        cv.add_cvitem(header="Hindi", text=hin)
+    
+    # Extra Curricular
+    cv.add_section(title="Extra Curricular Activities")
+    extra = check_none(config['EXTRA_ACTIVITIES'])
+    
+    for e in extra:
+        cv.add_cvlistitem(e)
+
+        
+
+
     return cv
 
 
