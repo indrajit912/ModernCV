@@ -365,6 +365,7 @@ def main():
     if not CONFIG_FILE.exists():
         create_default_config_yaml()
 
+    # Make CV
     make_cv()
 
 
