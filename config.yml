@@ -4,6 +4,7 @@
 # Author: Indrajit Ghosh
 # Created On: Dec 26, 2022
     
+    
 # Personal Info
 FIRST_NAME : Indrajit
 FAMILY_NAME : Ghosh
@@ -14,8 +15,8 @@ EMAIL : someone@somewhere.com
 PHOTO_FILENAME : indra.JPG  # Under process!
 
 # CV Settings
-THEME : casual  # available: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-COLOR : blue    # available: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+THEME : classic  # available: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+COLOR : black    # available: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 FONT_SIZE : 11  # available: 10, 11, or 12;
 PAPER_SIZE : a4paper  # available: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape
 FONT_FAMILY : sans # available: sans or roman
@@ -25,28 +26,28 @@ PHOTO_THICKNESS : 0.9
 # Education
 EDUCATION:
   - name : Diploma
-    years : Dec 2012--Aug 2016
+    years : 2013--2015
     institution : Barasat Govt. College
     country : India
     grade : CGPA 7.8
     description :
 
   - name : BSc in Mathematics
-    years : Dec 2016--Aug 2018
+    years : 2016--2018
     institution : University of Calcutta
     country : India
     grade : CGPA 8
     description : 
 
   - name : MSc in Pure Mathematics
-    years : Dec 2018--Aug 2019
+    years : 2018--2010
     institution : University of Calcutta
     country : India
     grade : CGPA 7
     description :
 
   - name : PhD in Mathematics
-    years : Dec 2019--present
+    years : 2020--present
     institution : Indian Statistical Institute
     country : India
     grade : CGPA 7
@@ -56,7 +57,7 @@ EDUCATION:
 # Internships
 INTERNSHIPS:
   - name : Winter Research Intern
-    years : 2019--2020 
+    years : Jul--Dec, 2020 
     institution : University of Calcutta, Kolkata
     description : 
       -  "Title: Foundation of Algebra" # a line which contains the key ':' must be put inside a double quotation "..."
@@ -73,7 +74,7 @@ PROJECTS:
       -  "Instructor: Dr. Malay Ghosh"
 
   - name : Semester Project
-    years : Jul2019--Dec2019 
+    years : 2019--2020 
     institution : Indian Statistical Bangalore, Kolkata
     description : 
       -  "Title: Fine Analysis of Molecules" # a line which contains the key ':' must be put inside a double quotation "..."
@@ -96,4 +97,5 @@ EXTRA_ACTIVITIES :
   - Swimming
   - Singing
 
+    
     

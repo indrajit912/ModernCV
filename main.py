@@ -206,6 +206,7 @@ def create_default_config_yaml():
 # Created On: {now}
     """
     data += r"""
+    
 # Personal Info
 FIRST_NAME : Indrajit
 FAMILY_NAME : Ghosh
@@ -216,8 +217,8 @@ EMAIL : someone@somewhere.com
 PHOTO_FILENAME : indra.JPG  # Under process!
 
 # CV Settings
-THEME : classic  # available: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-COLOR : blue    # available: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+THEME : classic  # available: 'classic' (default), 'casual', 'oldstyle' and 'banking'
+COLOR : black    # available: 'black' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'blue'
 FONT_SIZE : 11  # available: 10, 11, or 12;
 PAPER_SIZE : a4paper  # available: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape
 FONT_FAMILY : sans # available: sans or roman
@@ -227,28 +228,28 @@ PHOTO_THICKNESS : 0.9
 # Education
 EDUCATION:
   - name : Diploma
-    years : Dec 2012--Aug 2016
+    years : 2013--2015
     institution : Barasat Govt. College
     country : India
     grade : CGPA 7.8
     description :
 
   - name : BSc in Mathematics
-    years : Dec 2016--Aug 2018
+    years : 2016--2018
     institution : University of Calcutta
     country : India
     grade : CGPA 8
     description : 
 
   - name : MSc in Pure Mathematics
-    years : Dec 2018--Aug 2019
+    years : 2018--2010
     institution : University of Calcutta
     country : India
     grade : CGPA 7
     description :
 
   - name : PhD in Mathematics
-    years : Dec 2019--present
+    years : 2020--present
     institution : Indian Statistical Institute
     country : India
     grade : CGPA 7
@@ -258,7 +259,7 @@ EDUCATION:
 # Internships
 INTERNSHIPS:
   - name : Winter Research Intern
-    years : 2019--2020 
+    years : Jul--Dec, 2020 
     institution : University of Calcutta, Kolkata
     description : 
       -  "Title: Foundation of Algebra" # a line which contains the key ':' must be put inside a double quotation "..."
@@ -275,7 +276,7 @@ PROJECTS:
       -  "Instructor: Dr. Malay Ghosh"
 
   - name : Semester Project
-    years : Jul2019--Dec2019 
+    years : 2019--2020 
     institution : Indian Statistical Bangalore, Kolkata
     description : 
       -  "Title: Fine Analysis of Molecules" # a line which contains the key ':' must be put inside a double quotation "..."
@@ -298,6 +299,7 @@ EXTRA_ACTIVITIES :
   - Swimming
   - Singing
 
+    
     """
 
     with open('config.yml', 'w') as f:
@@ -333,7 +335,7 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
             pass
   
     doc_style = check_none(config['THEME'])
-    doc_color = check_none(config['THEME'])
+    doc_color = check_none(config['COLOR'])
     _font_size = check_none(config['FONT_SIZE'])
     _font_size = int(_font_size) if _font_size is not None else _font_size
     _paper_size = check_none(config['PAPER_SIZE'])
@@ -445,7 +447,6 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
     if os:
         cv.add_cvitem(header="Operating System", text=os)
 
-    print(cv.text)
 
     return cv
 
@@ -475,18 +476,12 @@ def make_cv():
 
 
 def main():
-    # CONFIG_FILE = Path(__file__).parent.resolve() / "CONFIG.txt"
+    CONFIG_FILE = Path(__file__).parent.resolve() / "config.yml"
 
-    # create_config_file()
+    if not CONFIG_FILE.exists():
+        create_default_config_yaml()
+
     make_cv()
-    # get_cvObject_from_config()
-
-    
-
-    # print(config['INTERNSHIPS'])
-
-    # create_default_config_yaml()
-
 
 
 if __name__ == '__main__':
