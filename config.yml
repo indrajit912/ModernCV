@@ -1,0 +1,95 @@
+# This is a 'configauration' file for generating the CV.
+# Modify this file properly(!) to get your desired result.
+
+# Author: Indrajit Ghosh
+# Created On: Dec 26, 2022
+    
+# Personal Info
+FIRST_NAME : Indrajit
+FAMILY_NAME : Ghosh
+ADDRESS_LINE_1 : 8th Mile, Mysore Road
+ADDRESS_LINE_2 : Bengalore 560059, India
+MOBILE : (+91) XXXX-XXXXXX
+EMAIL : someone@somewhere.com
+PHOTO_FILENAME : indra.JPG
+
+# CV Settings
+THEME : classic
+COLOR : blue
+FONT_SIZE : 11
+PAPER_SIZE : a4paper
+FONT_FAMILY : sans
+PHOTO_HEIGHT : 70
+PHOTO_THICKNESS : 0.9
+
+# Education
+EDUCATION:
+  - name : Diploma
+    years : Dec 2012--Aug 2016
+    institution : Barasat Govt. College
+    country : India
+    grade : CGPA 7.8
+
+  - name : BSc in Mathematics
+    years : Dec 2016--Aug 2018
+    institution : University of Calcutta
+    country : India
+    grade : CGPA 8
+
+  - name : MSc in Pure Mathematics
+    years : Dec 2018--Aug 2019
+    institution : University of Calcutta
+    country : India
+    grade : CGPA 7
+
+  - name : PhD in Mathematics
+    years : Dec 2019--present
+    institution : Indian Statistical Institute
+    country : India
+    grade : CGPA 7
+
+
+# Internships
+INTERNSHIPS:
+  - name : Winter Research Intern
+    years : 2019--2020 
+    institution : University of Calcutta, Kolkata
+    description : 
+      -  "Title: Foundation of Algebra" # a line which contains the key ':' must be put inside a double quotation "..."
+      -  "Instructor: Dr. Sandeep Jana"
+
+
+# Projects
+PROJECTS:
+  - name : Summer Project Work
+    years : 2019--2020 
+    institution : Indian Statistical Institute, Kolkata
+    description : 
+      -  "Title: What is Mathematics?" # a line which contains the key ':' must be put inside a double quotation "..."
+      -  "Instructor: Dr. Malay Ghosh"
+
+  - name : Semester Project
+    years : Jul2019--Dec2019 
+    institution : Indian Statistical Bangalore, Kolkata
+    description : 
+      -  "Title: Fine Analysis of Molecules" # a line which contains the key ':' must be put inside a double quotation "..."
+      -  "Instructor: Dr. Soumyashant Nayak"
+  
+
+
+# Skills
+PROGRAMMING_LANGUAGE : Python, C
+ENVIRONMENT : \LaTeX
+OS : Linux, MacOS and Windows
+
+# Languages
+BENGALI : Native Speaker
+ENGLISH : Fluent
+HINDI : Speak and understand
+
+# Extra Curricular Activities
+EXTRA_ACTIVITIES :
+  - Swimming
+  - Singing
+
+    

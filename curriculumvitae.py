@@ -136,7 +136,7 @@ class CurriculumVitae:
         return self._photo
 
     @photo.setter
-    def photo_path(self, p):
+    def photo(self, p):
         self._photo = p
 
     @property
