@@ -327,6 +327,10 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
     mob = check_none(config['MOBILE'])
     _email = check_none(config['EMAIL'])
     photo_filename = check_none(config['PHOTO_FILENAME'])
+    if photo_filename:
+        if photo_filename != 'indra.JPG':
+            # TODO: Check whether it exsts or not.
+            pass
   
     doc_style = check_none(config['THEME'])
     doc_color = check_none(config['THEME'])
