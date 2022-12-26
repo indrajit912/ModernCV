@@ -231,24 +231,28 @@ EDUCATION:
     institution : Barasat Govt. College
     country : India
     grade : CGPA 7.8
+    description :
 
   - name : BSc in Mathematics
     years : Dec 2016--Aug 2018
     institution : University of Calcutta
     country : India
     grade : CGPA 8
+    description : 
 
   - name : MSc in Pure Mathematics
     years : Dec 2018--Aug 2019
     institution : University of Calcutta
     country : India
     grade : CGPA 7
+    description :
 
   - name : PhD in Mathematics
     years : Dec 2019--present
     institution : Indian Statistical Institute
     country : India
     grade : CGPA 7
+    description :
 
 
 # Internships
@@ -353,37 +357,29 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
         photo_thickness=_photo_thickness
     )
 
-    print(cv.email)
-    print(cv.photo)
-    print(cv._photo_height)
-
 
     # TODO: Use a `config.py` file to generate everythings below
 
     # Education
-    # cv.add_section(title="Education")
-    # _edu = config['EDUCATION']
+    cv.add_section(title="Education")
+    _edu = config['EDUCATION']
+    # print(_edu)
 
-    # for k, v in _edu.items():
-    #     degree = _edu[k]
-    #     print(dict(degree))
-    #     # del degree['years']
-    #     _name = degree['name']
-    #     _inst = degree['institution']
-    #     _country = degree['country']
-    #     _grade = degree['grade']
-
-
-        # print("\n\n\n\n")
+    for degree in _edu:
+        _years = degree['years']
+        _name = degree['name']
+        _inst = degree['institution']
+        _country = degree['country']
+        _grade = degree['grade']
         
-        # cv.add_cventry(
-        #     years=_years,
-        #     degree_or_job_title=_name,
-        #     institution_or_employer=_inst,
-        #     localization=_country,
-        #     grade=_grade,
-        #     # description=
-        # )
+        cv.add_cventry(
+            years=_years,
+            degree_or_job_title=_name,
+            institution_or_employer=_inst,
+            localization=_country,
+            grade=_grade,
+            description=degree['description']
+        )
 
     # cv.add_cventry(
     #     years="2016--2018",
@@ -439,11 +435,21 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
     # )
 
 
-    # # Skills
-    # cv.add_section(title="Skills and Activities")
-    # cv.add_cvitem(header="Programming Language", text="Python, C")
-    # cv.add_cvitem(header="Environment", text="\\LaTeX")
-    # cv.add_cvitem(header="Operating System", text="Linux, MacOS, Windows")
+    # Skills
+    cv.add_section(title="Skills")
+    programming = check_none(config['PROGRAMMING_LANGUAGE'])
+    if programming:
+        cv.add_cvitem(header="Programming Language", text=programming)
+
+    envn = check_none(config['ENVIRONMENT'])
+    if envn:
+        cv.add_cvitem(header="Environment", text=envn)
+    
+    os = check_none(config['OS'])
+    if os:
+        cv.add_cvitem(header="Operating System", text=os)
+
+    print(cv.text)
 
 
     # # Language

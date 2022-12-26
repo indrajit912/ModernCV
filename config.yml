@@ -29,24 +29,28 @@ EDUCATION:
     institution : Barasat Govt. College
     country : India
     grade : CGPA 7.8
+    description :
 
   - name : BSc in Mathematics
     years : Dec 2016--Aug 2018
     institution : University of Calcutta
     country : India
     grade : CGPA 8
+    description : 
 
   - name : MSc in Pure Mathematics
     years : Dec 2018--Aug 2019
     institution : University of Calcutta
     country : India
     grade : CGPA 7
+    description :
 
   - name : PhD in Mathematics
     years : Dec 2019--present
     institution : Indian Statistical Institute
     country : India
     grade : CGPA 7
+    description :
 
 
 # Internships
