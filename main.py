@@ -213,14 +213,14 @@ ADDRESS_LINE_1 : 8th Mile, Mysore Road
 ADDRESS_LINE_2 : Bengalore 560059, India
 MOBILE : (+91) XXXX-XXXXXX
 EMAIL : someone@somewhere.com
-PHOTO_FILENAME : indra.JPG
+PHOTO_FILENAME : indra.JPG  # Under process!
 
 # CV Settings
-THEME : classic
-COLOR : blue
-FONT_SIZE : 11
-PAPER_SIZE : a4paper
-FONT_FAMILY : sans
+THEME : classic  # available: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+COLOR : blue    # available: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+FONT_SIZE : 11  # available: 10, 11, or 12;
+PAPER_SIZE : a4paper  # available: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape
+FONT_FAMILY : sans # available: sans or roman
 PHOTO_HEIGHT : 70
 PHOTO_THICKNESS : 0.9
 
@@ -367,7 +367,6 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
     # Education
     cv.add_section(title="Education")
     _edu = config['EDUCATION']
-    # print(_edu)
 
     for degree in _edu:
         _years = degree['years']
@@ -375,6 +374,10 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
         _inst = degree['institution']
         _country = degree['country']
         _grade = degree['grade']
+        _description = check_none(degree['description'])
+        if _description:
+            if isinstance(_description, list):
+                _description = r'\\'.join(_description)
         
         cv.add_cventry(
             years=_years,
@@ -382,61 +385,50 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
             institution_or_employer=_inst,
             localization=_country,
             grade=_grade,
-            description=degree['description']
+            description=check_none(_description)
         )
 
-    # cv.add_cventry(
-    #     years="2016--2018",
-    #     degree_or_job_title="MSc in Mathematics",
-    #     institution_or_employer="University of Calcutta",
-    #     localization="India",
-    #     grade="1st class",
-    #     description="Dissertation Title: The Banach Tarski Paradox"
-    # )
 
-    # # Internships
-    # cv.add_section(title="Internships")
-    # cv.add_cventry(
-    #     years="Dec2018--Jan2019",
-    #     degree_or_job_title="Winter Research Intern",
-    #     institution_or_employer="Indian Statistical Institute, Kolkata",
-    #     description=r'\\'.join(["Title: Fundamental Theorem of Algebra", # TODO: Take description as list
-    #     "Instructor: Dr. Soumyashant Nayak"
-    #     ])
-    # )
+    # Internships
+    cv.add_section(title="Internships")
+    _intern = config['EDUCATION']
 
-    # # Projects
-    # cv.add_section(title="Projects")
-    # project1 = {
-    #     "years": "2019--2020",
-    #     "title": "Semester Mini Project",
-    #     "institution": "University of Calcutta, Kolkata",
-    #     "description": [
-    #         "Instructor: Dr. Malay Ghosh",
-    #     ]
-    # }
-    # cv.add_cventry(
-    #     years=project1['years'],
-    #     degree_or_job_title=project1['title'],
-    #     institution_or_employer=project1['institution'],
-    #     description=r'\\'.join(project1['description'])
-    # )
+    for degree in _intern:
+        _years = degree['years']
+        _name = degree['name']
+        _inst = degree['institution']
+        _description = check_none(degree['description'])
+        if _description:
+            if isinstance(_description, list):
+                _description = r'\\'.join(_description)
+        
+        cv.add_cventry(
+            years=_years,
+            degree_or_job_title=_name,
+            institution_or_employer=_inst,
+            description=_description
+        )
 
-    # project2 = {
-    #     "years": "Dec2018--Jan2019",
-    #     "title": "Winter Research Project",
-    #     "institution": "Indian Statistical Institute, Kolkata",
-    #     "description": [
-    #         "Title: Fundamental Theorem of Algebra",
-    #         "Instructor: Dr. Soumyashant Nayak"
-    #     ]
-    # }
-    # cv.add_cventry(
-    #     years=project2['years'],
-    #     degree_or_job_title=project2['title'],
-    #     institution_or_employer=project2['institution'],
-    #     description=r'\\'.join(project2['description'])
-    # )
+    # Projects
+    cv.add_section(title="Projects")
+    _projects = config['PROJECTS']
+
+    for degree in _projects:
+        _years = degree['years']
+        _name = degree['name']
+        _inst = degree['institution']
+        _description = check_none(degree['description'])
+
+        if _description:
+            if isinstance(_description, list):
+                _description = r'\\'.join(_description)
+        
+        cv.add_cventry(
+            years=_years,
+            degree_or_job_title=_name,
+            institution_or_employer=_inst,
+            description=_description
+        )
 
 
     # Skills
@@ -455,28 +447,17 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
 
     print(cv.text)
 
-
-    # # Language
-    # cv.add_section(title="Languages")
-    # cv.add_cvitem(header="Bengali", text="Native Speaker")
-    # cv.add_cvitem(header="English", text="Fluent")
-
-
-    # # Extra Curricular Activities
-    # cv.add_section(title="Extra Curricular Activities")
-    # cv.add_cvlistitem("Swimming")
-    # cv.add_cvlistitem("Singing")
-
-    # return cv
+    return cv
 
 
 def make_cv():
     TEX_DIR = Path(__file__).parent.resolve() / "tex_dir"
 
     # Create cv
-    cv = get_cvObject(
-        photo_height=70
-    )
+    # cv = get_cvObject(
+    #     photo_height=70
+    # )
+    cv = get_cvObject_from_config()
     setup_tex_dir(tex_dir=TEX_DIR, cvObj=cv)
 
     # Change the dir
@@ -497,8 +478,8 @@ def main():
     # CONFIG_FILE = Path(__file__).parent.resolve() / "CONFIG.txt"
 
     # create_config_file()
-    # make_cv()
-    get_cvObject_from_config()
+    make_cv()
+    # get_cvObject_from_config()
 
     
 

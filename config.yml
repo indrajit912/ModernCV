@@ -11,14 +11,14 @@ ADDRESS_LINE_1 : 8th Mile, Mysore Road
 ADDRESS_LINE_2 : Bengalore 560059, India
 MOBILE : (+91) XXXX-XXXXXX
 EMAIL : someone@somewhere.com
-PHOTO_FILENAME : indra.JPG
+PHOTO_FILENAME : indra.JPG  # Under process!
 
 # CV Settings
-THEME : classic
-COLOR : blue
-FONT_SIZE : 11
-PAPER_SIZE : a4paper
-FONT_FAMILY : sans
+THEME : casual  # available: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+COLOR : blue    # available: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+FONT_SIZE : 11  # available: 10, 11, or 12;
+PAPER_SIZE : a4paper  # available: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape
+FONT_FAMILY : sans # available: sans or roman
 PHOTO_HEIGHT : 70
 PHOTO_THICKNESS : 0.9
 
