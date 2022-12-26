@@ -5,6 +5,7 @@
 tex_dir/
 test_tex/
 templates/
+config.yml
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
