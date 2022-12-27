@@ -257,11 +257,11 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
                 _description = r'\\'.join(_description)
         
         cv.add_cventry(
-            years=_years,
+            years=str(_years),
             degree_or_job_title=_name,
             institution_or_employer=_inst,
             localization=_country,
-            grade=_grade,
+            grade=str(_grade),
             description=check_none(_description)
         )
 
@@ -271,7 +271,7 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
     _intern = config['EDUCATION']
 
     for degree in _intern:
-        _years = degree['years']
+        _years = str(degree['years'])
         _name = degree['name']
         _inst = degree['institution']
         _description = check_none(degree['description'])
@@ -280,7 +280,7 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
                 _description = r'\\'.join(_description)
         
         cv.add_cventry(
-            years=_years,
+            years=str(_years),
             degree_or_job_title=_name,
             institution_or_employer=_inst,
             description=_description
@@ -301,7 +301,7 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
                 _description = r'\\'.join(_description)
         
         cv.add_cventry(
-            years=_years,
+            years=str(_years),
             degree_or_job_title=_name,
             institution_or_employer=_inst,
             description=_description
@@ -313,16 +313,24 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
     programming = check_none(config['PROGRAMMING_LANGUAGE'])
     if programming:
         cv.add_cvitem(header="Programming Language", text=programming)
-
-    envn = check_none(config['ENVIRONMENT'])
-    if envn:
-        cv.add_cvitem(header="Environment", text=envn)
     
     os = check_none(config['OS'])
     if os:
         cv.add_cvitem(header="Operating System", text=os)
 
+    design = check_none(config['DESIGN'])
+    if design:
+        cv.add_cvitem(header="Design", text=design)
+    
+    analysis = check_none(config['ANALYSIS'])
+    if analysis:
+        cv.add_cvitem(header="Analysis", text=analysis)
 
+    envn = check_none(config['ENVIRONMENT'])
+    if envn:
+        cv.add_cvitem(header="Environment", text=envn)
+    
+    
     # Language
     cv.add_section(title="Languages")
     beng = check_none(config['BENGALI'])
