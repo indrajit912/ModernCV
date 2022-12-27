@@ -110,33 +110,26 @@ PHOTO_THICKNESS : 0.9
 
 # Education
 EDUCATION:
-  - name : Diploma
-    years : 2013--2015
-    institution : Barasat Govt. College
-    country : India
-    grade : CGPA 7.8
+  - name : PhD in Mathematics
+    years : 2020--present
+    institution : Indian Statistical Institute
+    country : Bangalore, India
+    grade : ''
     description :
-
-  - name : BSc in Mathematics
-    years : 2016--2018
-    institution : University of Calcutta
-    country : India
-    grade : CGPA 8
-    description : 
 
   - name : MSc in Pure Mathematics
     years : 2018--2010
     institution : University of Calcutta
-    country : India
-    grade : CGPA 7
+    country : Kolkata, India
+    grade : CGPA 9
     description :
 
-  - name : PhD in Mathematics
-    years : 2020--present
-    institution : Indian Statistical Institute
-    country : India
-    grade : CGPA 7
-    description :
+  - name : BSc in Mathematics
+    years : 2016--2018
+    institution : Barasat Govt. College
+    country : West Bengal, India
+    grade : CGPA 8
+    description : 
 
 
 # Internships
@@ -180,9 +173,7 @@ HINDI : Speak and understand
 # Extra Curricular Activities
 EXTRA_ACTIVITIES :
   - Swimming
-  - Singing
-
-    
+  - Painting
     """
 
     with open('config.yml', 'w') as f:
@@ -317,18 +308,20 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
     programming = check_none(config['PROGRAMMING_LANGUAGE'])
     if programming:
         cv.add_cvitem(header="Programming Language", text=programming)
-    
+
     os = check_none(config['OS'])
     if os:
         cv.add_cvitem(header="Operating System", text=os)
 
-    design = check_none(config['DESIGN'])
-    if design:
-        cv.add_cvitem(header="Design", text=design)
+    if 'DESIGN' in config.keys():
+        design = check_none(config['DESIGN'])
+        if design:
+            cv.add_cvitem(header="Design", text=design)
     
-    analysis = check_none(config['ANALYSIS'])
-    if analysis:
-        cv.add_cvitem(header="Analysis", text=analysis)
+    if 'ANALYSIS' in config.keys():
+        analysis = check_none(config['ANALYSIS'])
+        if analysis:
+            cv.add_cvitem(header="Analysis", text=analysis)
 
     envn = check_none(config['ENVIRONMENT'])
     if envn:
