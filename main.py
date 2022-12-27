@@ -268,7 +268,7 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
 
     # Internships
     cv.add_section(title="Internships")
-    _intern = config['EDUCATION']
+    _intern = config['INTERNSHIPS']
 
     for degree in _intern:
         _years = str(degree['years'])
