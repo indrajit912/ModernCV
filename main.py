@@ -182,6 +182,9 @@ def check_none(item):
 
 
 def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
+    """
+    This function reads a config file and returns CurriculumVitae() object.
+    """
 
     # TODO: Handle latex commands given in the config file. e.g- '&' char shold be '\&'
     # TODO: Modify the code to handle descriptions which are in `list` of '' i.e. ['', '']
@@ -234,70 +237,72 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
 
 
     # Education
-    cv.add_section(title="Education")
-    _edu = config['EDUCATION']
+    if 'EDUCATION' in config.keys():
+        cv.add_section(title="Education")
+        _edu = config['EDUCATION']
 
-    for degree in _edu:
-        _years = degree['years']
-        _name = degree['name']
-        _inst = degree['institution']
-        _country = degree['country']
-        _grade = degree['grade']
-        _description = check_none(degree['description'])
-        if _description:
-            if isinstance(_description, list):
-                _description = r'\\'.join(_description)
-        
-        cv.add_cventry(
-            years=str(_years),
-            degree_or_job_title=_name,
-            institution_or_employer=_inst,
-            localization=_country,
-            grade=str(_grade),
-            description=check_none(_description)
-        )
+        for degree in _edu:
+            _years = degree['years']
+            _name = degree['name']
+            _inst = degree['institution']
+            _country = degree['country']
+            _grade = degree['grade']
+            _description = check_none(degree['description'])
+            if _description:
+                if isinstance(_description, list):
+                    _description = r'\\'.join(_description)
 
+            cv.add_cventry(
+                years=str(_years),
+                degree_or_job_title=_name,
+                institution_or_employer=_inst,
+                localization=_country,
+                grade=str(_grade),
+                description=check_none(_description)
+            )
 
     # Internships
-    cv.add_section(title="Internships")
-    _intern = config['INTERNSHIPS']
+    if 'INTERNSHIPS' in config.keys():
+        cv.add_section(title="Internships")
+        _intern = config['INTERNSHIPS']
 
-    for degree in _intern:
-        _years = str(degree['years'])
-        _name = degree['name']
-        _inst = degree['institution']
-        _description = check_none(degree['description'])
-        if _description:
-            if isinstance(_description, list):
-                _description = r'\\'.join(_description)
-        
-        cv.add_cventry(
-            years=str(_years),
-            degree_or_job_title=_name,
-            institution_or_employer=_inst,
-            description=_description
-        )
+        for degree in _intern:
+            _years = str(degree['years'])
+            _name = degree['name']
+            _inst = degree['institution']
+            _description = check_none(degree['description'])
+            if _description:
+                if isinstance(_description, list):
+                    _description = r'\\'.join(_description)
+
+            cv.add_cventry(
+                years=str(_years),
+                degree_or_job_title=_name,
+                institution_or_employer=_inst,
+                description=_description
+            )
 
     # Projects
-    cv.add_section(title="Projects")
-    _projects = config['PROJECTS']
+    if 'PROJECTS' in config.keys():
+        cv.add_section(title="Projects")
+        _projects = config['PROJECTS']
 
-    for degree in _projects:
-        _years = degree['years']
-        _name = degree['name']
-        _inst = degree['institution']
-        _description = check_none(degree['description'])
+        for degree in _projects:
+            _years = degree['years']
+            _name = degree['name']
+            _inst = degree['institution']
+            _description = check_none(degree['description'])
 
-        if _description:
-            if isinstance(_description, list):
-                _description = r'\\'.join(_description)
-        
-        cv.add_cventry(
-            years=str(_years),
-            degree_or_job_title=_name,
-            institution_or_employer=_inst,
-            description=_description
-        )
+            if _description:
+                if isinstance(_description, list):
+                    _description = r'\\'.join(_description)
+
+            cv.add_cventry(
+                years=str(_years),
+                degree_or_job_title=_name,
+                institution_or_employer=_inst,
+                description=_description
+            )
 
 
     # Skills
@@ -345,9 +350,6 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
     
     for e in extra:
         cv.add_cvlistitem(e)
-
-        
-
 
     return cv
 
