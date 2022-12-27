@@ -16,7 +16,7 @@ PHOTO_FILENAME :
 
 # CV Settings
 THEME : classic  # available - 'classic' (default), 'casual', 'oldstyle' and 'banking'
-COLOR : black    # available - 'black' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'blue'
+COLOR : blue    # available - 'black' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'blue'
 FONT_SIZE : 11  # available - 10, 11, or 12;
 PAPER_SIZE : a4paper  # available - a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape
 FONT_FAMILY : sans # available - sans or roman
@@ -24,28 +24,7 @@ PHOTO_HEIGHT : 70
 PHOTO_THICKNESS : 0.9
 
 # Education
-EDUCATION:
-  - name : Madhyamik
-    years : 2014
-    institution : Dakshin Chatra High School
-    country : India
-    grade : Percentage 77.28
-    description : West Bengal Board Of Secondary Education
-
-  - name : Higher Secondary
-    years : 2016
-    institution : Dakshin Chatra High School
-    country : India
-    grade : Percentage 70.8
-    description : West Bengal Council Of Higher Secondary Education
-
-  - name : Diploma In Civil Engineering
-    years : 2016--2019
-    institution : Ramakrishna Mission Shilpapitha
-    country : India
-    grade : Percentage 78.2
-    description : West Bengal State council Of Technical \& Vocational Education \& Skill Development
-
+EDUCATION :
   - name : B.TECH In Civil Engineering
     years : 2020--present
     institution : Meghnad Saha Institute Of Technology
@@ -53,32 +32,52 @@ EDUCATION:
     grade : 6th SEM 89.2
     description : Maulana Abul Kamal Umiversity Of Technology
 
+  - name : Diploma In Civil Engineering
+    years : 2016--2019
+    institution : Ramakrishna Mission Shilpapitha
+    country : India
+    grade : Percentage 78.2
+    description : West Bengal State council Of Technical \& Vocational Education \& Skill Development
+    
+  - name : Higher Secondary
+    years : 2016
+    institution : Dakshin Chatra High School
+    country : India
+    grade : Percentage 70.8
+    description : West Bengal Council Of Higher Secondary Education
+    
+  - name : Madhyamik
+    years : 2014
+    institution : Dakshin Chatra High School
+    country : India
+    grade : Percentage 77.28
+    description : West Bengal Board Of Secondary Education
+
+
 
 # Internships
 INTERNSHIPS:
-  - name : DESIGN CAPACITY OF 200KL OVER HEAD WATER TANK FOR 14M R.C.C. STAGING
+  - name : Design Capacity OF 200KL OVER HEAD WATER TANK FOR 14M R.C.C. STAGING
     years : Aug--Sept, 2022 
     institution : Ionexchange India LTD.
     description : 
-      -  "" # a line which contains the key ':' must be put inside a double quotation "..."
-      -  ""
 
 
 # Projects
-PROJECTS:
+PROJECTS :
   - name : Summer Project Work
     years : 2019--2020 
     institution : Indian Statistical Institute, Kolkata
     description : 
-      -  "Title: What is Mathematics?" # a line which contains the key ':' must be put inside a double quotation "..."
-      -  "Instructor: Dr. Malay Ghosh"
+      - "Title: What is Mathematics?" # a line which contains the key ':' must be put inside a double quotation "..."
+      - "Instructor: Dr. Malay Ghosh"
 
   - name : Semester Project
     years : 2019--2020 
     institution : Indian Statistical Bangalore, Kolkata
     description : 
-      -  "Title: Fine Analysis of Molecules" # a line which contains the key ':' must be put inside a double quotation "..."
-      -  "Instructor: Dr. Soumyashant Nayak"
+      - "Title: Fine Analysis of Molecules" # a line which contains the key ':' must be put inside a double quotation "..."
+      - "Instructor: Dr. Soumyashant Nayak"
   
 
 # Skills
