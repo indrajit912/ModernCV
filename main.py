@@ -195,6 +195,10 @@ def check_none(item):
 
 def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
 
+    # TODO: Handle latex commands given in the config file. e.g- '&' char shold be '\&'
+    # TODO: Modify the code to handle descriptions which are in `list` of '' i.e. ['', '']
+    #       This type of lists should not be converted into ''\\'' in LaTeX doc.
+
     with open(_config_file, 'r') as f:
         config = yaml.safe_load(f)
 
