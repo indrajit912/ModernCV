@@ -1430,7 +1430,7 @@ class ModernCVStyleOldStyFile(ModernCVStyleStyFile):
 % fonts
 \renewcommand*{\namefont}{\fontsize{34}{36}\mdseries\upshape}
 \renewcommand*{\titlefont}{\LARGE\mdseries\slshape}
-\renewcommand*{\addressfont}{\small\mdseries}
+\renewcommand*{\addressfont}{\fontsize{8.7}{11}\mdseries}
 \renewcommand*{\quotefont}{\large\itshape}
 \renewcommand*{\sectionfont}{\Large\bfseries\upshape}
 \renewcommand*{\subsectionfont}{\large\bfseries\itshape}
