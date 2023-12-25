@@ -257,7 +257,7 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
                 degree_or_job_title=_name,
                 institution_or_employer=_inst,
                 localization=_country,
-                grade=str(_grade),
+                grade=check_none(_grade),
                 description=check_none(_description)
             )
 
