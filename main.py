@@ -334,6 +334,10 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
     if programming:
         cv.add_cvitem(header="Programming Language", text=programming)
 
+    project_management = check_none(config['PROJECT_MANAGEMENT'])
+    if project_management:
+        cv.add_cvitem(header="Project Management", text=project_management)
+
     os = check_none(config['OS'])
     if os:
         cv.add_cvitem(header="Operating System", text=os)
