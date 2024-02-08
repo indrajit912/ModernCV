@@ -262,6 +262,28 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
             )
 
     # Internships
+    if 'EXPERIENCES' in config.keys():
+        cv.add_section(title="Experiences")
+        _experiences = config['EXPERIENCES']
+
+        for exp in _experiences:
+            _years = str(exp['years'])
+            _name = exp['name']
+            _inst = exp['institution']
+            _description = check_none(exp['description'])
+            if _description:
+                if isinstance(_description, list):
+                    _description = r'\\'.join(_description)
+
+            cv.add_cventry(
+                years=str(_years),
+                degree_or_job_title=_name,
+                institution_or_employer=_inst,
+                description=_description
+            )
+
+
+    # Internships
     if 'INTERNSHIPS' in config.keys():
         cv.add_section(title="Internships")
         _intern = config['INTERNSHIPS']
@@ -282,6 +304,7 @@ def get_cvObject_from_config(_config_file:Path=Path.cwd() / 'config.yml'):
                 description=_description
             )
 
+    
     # Projects
     if 'PROJECTS' in config.keys():
         cv.add_section(title="Projects")
