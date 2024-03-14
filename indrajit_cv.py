@@ -8,6 +8,7 @@
 from curriculumvitae import CurriculumVitae
 from main import setup_tex_dir
 from pathlib import Path
+import os, sys
 
 
 class IndrajitCV(CurriculumVitae):
@@ -30,7 +31,7 @@ class IndrajitCV(CurriculumVitae):
             address=["8th Mile Mysore Road, Pin-560 059", "Bangalore, India"],
             mobile="(+91) 9564 957618",
             email="indrajitghosh912@gmail.com",
-            style="casual",
+            style="oldstyle",
             font_size=12,
             photo_height=70,
             photo_thickness=0.9,
@@ -65,6 +66,18 @@ def main():
 
     print(indrajit.text)
 
+    # Change the dir
+    os.chdir(str(tex_dir))
+
+    # Compile cv.tex
+    os.system("pdflatex cv.tex")
+
+    # Open cv.pdf
+    pdfpath = str(tex_dir / "cv.pdf")
+    if sys.platform.startswith('linux'):
+        os.system(f"xdg-open {pdfpath}")
+    else:
+        os.startfile(pdfpath)
 
 if __name__ == '__main__':
     main()
