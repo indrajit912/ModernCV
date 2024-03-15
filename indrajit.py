@@ -100,6 +100,55 @@ class Indrajit:
         },
     ]
 
+    teaching_experience = [
+        {
+            'role': "Teaching Assistant",
+            'year': "Jan 2024 -- Present",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India",
+            'course': "A Course in Harmonic Analysis (B. Math III)",
+            'instructor': "Soumyashant Nayak",
+            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/course_harmonic_even2024.html"
+        },
+        {
+            'role': "Teaching Assistant",
+            'year': "Aug 01 -- Nov 25, 2023",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India",
+            'course': "Analysis of Several Variables (B. Math II)",
+            'instructor': "Mathew Joseph",
+            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/anal_several_vars_odd_2023.html"
+        },
+        {
+            'role': "Teaching Assistant",
+            'year': "Aug 2022 -- Nov 2022",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India",
+            'course': "Complex Analysis I (B. Math III)",
+            'instructor': "Mathew Joseph",
+            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/comp_anal_odd_sem_2022.html"
+        },
+        {
+            'role': "Teaching Assistant",
+            'year': "Jan 2022 -- Apr 2022",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India",
+            'course': "Functional Analysis (M. Math I)",
+            'instructor': "Soumyashant Nayak",
+            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/func_anal_even_sem_2021.html"
+        },
+        {
+            'role': "Teaching Assistant",
+            'year': "Sep 21 -- Dec 23, 2021",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India",
+            'course': " Optimization (B. Math II)",
+            'instructor': "Soumyashant Nayak",
+            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/optimization_odd_sem_2021.html"
+        },
+    ]
+
+
     conferences = [
         {
             'title': "Young Mathematicians in Operator Algebras",
@@ -122,7 +171,7 @@ class Indrajit:
             'date': "Feb 21 -- 25, 2023",
             'institute': "Indian Institute of Technology Bombay, India",
             'country': "Bombay, India",
-            'venue': "Victor Menezes Convention Centre(VMCC), IIT Bombay",
+            'venue': "Victor Menezes Convention Centre (VMCC), IIT Bombay",
             'website': {'url': "https://sites.google.com/view/cfart-2023-iitb/", 'url_text': ''}
         },
         {
@@ -191,7 +240,7 @@ class Indrajit:
         },
         {
             'title': "Online Workshop on Algebraic Number Theory",
-            'date': "Sep 2022",
+            'date': "Sep 2020",
             'institute': "Assam University",
             'country': "Assam, India",
             'venue': "Online",
@@ -199,53 +248,6 @@ class Indrajit:
         },
     ]
 
-    teaching_experience = [
-        {
-            'role': "Teaching Assistant",
-            'year': "Jan 2024 -- Present",
-            'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India",
-            'course': "A Course in Harmonic Analysis (B. Math III)",
-            'instructor': "Soumyashant Nayak",
-            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/course_harmonic_even2024.html"
-        },
-        {
-            'role': "Teaching Assistant",
-            'year': "Aug 01 -- Nov 25, 2023",
-            'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India",
-            'course': "Analysis of Several Variables (B. Math II)",
-            'instructor': "Mathew Joseph",
-            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/anal_several_vars_odd_2023.html"
-        },
-        {
-            'role': "Teaching Assistant",
-            'year': "Aug 2022 -- Nov 2022",
-            'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India",
-            'course': "Complex Analysis I (B. Math III)",
-            'instructor': "Mathew Joseph",
-            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/comp_anal_odd_sem_2022.html"
-        },
-        {
-            'role': "Teaching Assistant",
-            'year': "Jan 2022 -- Apr 2022",
-            'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India",
-            'course': "Functional Analysis (M. Math I)",
-            'instructor': "Soumyashant Nayak",
-            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/func_anal_even_sem_2021.html"
-        },
-        {
-            'role': "Teaching Assistant",
-            'year': "Sep 21 -- Dec 23, 2021",
-            'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India",
-            'course': " Optimization (B. Math II)",
-            'instructor': "Soumyashant Nayak",
-            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/optimization_odd_sem_2021.html"
-        },
-    ]
 
     references = [
         {

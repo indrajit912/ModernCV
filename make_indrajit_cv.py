@@ -33,6 +33,7 @@ class IndrajitCV(CurriculumVitae):
             mobile=Indrajit.mobile,
             email=Indrajit.email,
             style="banking",
+            color="blue",
             font_size=10,
             photo_height=70,
             photo_thickness=0.9,
@@ -122,7 +123,11 @@ class IndrajitCV(CurriculumVitae):
             teach_desc = (
                 "\n"
                 + r"\cvlistitem{"
-                + f"Course: {teach['course']}" 
+                + "Course: " 
+                + _get_weblink_tex(
+                    url=teach['webpage'],
+                    url_text=teach['course']
+                )
                 + "}"
                 + "\n"
                 + r"\cvlistitem{Instructor: "
