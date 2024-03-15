@@ -46,7 +46,7 @@ class Indrajit:
     fellowship_achievement = [
         {
             'year': '2019',
-            'description': r"Selected for \textbf{NBHM JRF} fellowship, \emph{National Board for Higher Mathematics}, Dept. Of Atomic Energy, Govt. of India, 2019, Ref No. 0203/11/2019-R\&D-II/9261."
+            'description': r"Selected for \textbf{NBHM JRF} fellowship, \emph{National Board for Higher Mathematics}, Dept. Of Atomic Energy, Govt. of India, 2019, Ref No. \texttt{0203/11/2019-R\&D-II/9261}."
         },
         {
             'year': '2019',

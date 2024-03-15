@@ -68,7 +68,8 @@ class CurriculumVitae:
         style:str=None,
         color:str=None,
         photo_height:float=None,
-        photo_thickness:float=None
+        photo_thickness:float=None,
+        colorlinks:bool=True
     ):
         self._firstname = first_name
         self._familyname = family_name
@@ -86,6 +87,7 @@ class CurriculumVitae:
         self._color = self.default_color if color is None else color
         self._photo_height = self.default_photo_height if photo_height is None else photo_height
         self._photo_thickness = self.default_photo_thickness if photo_thickness is None else photo_thickness
+        self._colorlinks = colorlinks
 
         self._preamble = self.get_preamble()
         self._body = self.get_body()
@@ -179,6 +181,14 @@ class CurriculumVitae:
     def color(self, new):
         self._color = new
 
+    @property
+    def colorlinks(self):
+        return self._colorlinks
+    
+    @colorlinks.setter
+    def colorlinks(self, new:bool):
+        self._colorlinks = new
+
 
     @property
     def text(self):
@@ -206,10 +216,16 @@ class CurriculumVitae:
 """
         preamble += texauthor_msg
 
+        _colorlinks = (
+            ',colorlinks'
+            if self._colorlinks
+            else ''
+        )
+
         docmentclass = (
             "\n"
             r"\documentclass[" + 
-            f"{self._fontsize}pt,{self._papersize},{self._fontfamily}" + 
+            f"{self._fontsize}pt,{self._papersize},{self._fontfamily}{_colorlinks}" + 
             r"]{moderncv}" + 
             "\n"
         )

@@ -1,8 +1,9 @@
-# Indrajit_CV
+# Indrajit_CV - This script generate the CV from the data
+# given in indrajit.py module
 #
 # Author: Indrajit Ghosh
-#
 # Created on: Mar 04, 2023
+# Modified On: Mar 15, 2024
 #
 
 from curriculumvitae import CurriculumVitae
@@ -188,7 +189,7 @@ class IndrajitCV(CurriculumVitae):
 
 
 def main():
-    tex_dir = Path.home() / 'Desktop' / 'indra_cv'
+    tex_dir = Path.cwd() / 'indra_cv'
     indrajit = IndrajitCV()
 
     setup_tex_dir(tex_dir=tex_dir, cvObj=indrajit)

@@ -169,3 +169,31 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.toc
+*.out
+*.lof
+*.lot
+*.lol
+*.gz
+*.bcf
+*.run.xml
+*-blx.bib
+*-blx.aux
+*-blx.bbl
+*-blx.bcf
+*-blx.bib
+*-blx.blg
+*-blx.log
+*-blx.out
+*-blx.run.xml
+*-blx.synctex.gz
+*-blx.tex
+*-blx.toc
