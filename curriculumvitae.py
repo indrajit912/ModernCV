@@ -269,6 +269,13 @@ class CurriculumVitae:
             r"\makecvtitle" + 
             "\n"
         )
+    
+    def add_raw_tex(self, tex:str):
+        """
+        Adds a raw LaTeX to the body
+        """
+        self._body += "\n" + tex
+
 
     @staticmethod
     def _cvitem(spacing:float, header:str, text:str):
@@ -364,13 +371,14 @@ class CurriculumVitae:
         return (
             "\n" +
             r"\cvitemwithcomment[" + 
-            spacing + r"]{" + 
+            spacing + "em" + 
+            r"]{" + 
             header + 
             r"}{" + 
             text + 
             r"}{" +
             comment + 
-            r"}{" + 
+            r"}" + 
             "\n"
         )
 
@@ -386,7 +394,7 @@ class CurriculumVitae:
             header=header,
             text=text,
             comment=comment,
-            spacing=spacing
+            spacing=str(spacing)
         )
 
     @staticmethod

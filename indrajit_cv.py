@@ -9,51 +9,95 @@ from curriculumvitae import CurriculumVitae
 from main import setup_tex_dir
 from pathlib import Path
 import os, sys
+from indrajit import Indrajit
 
 
 class IndrajitCV(CurriculumVitae):
 
-    EDUCATIONS = [
-        {
-            "years": '2023-2034',
-            "degree": 'PhD in Mathematics',
-            "institution": 'Indian Statistical Institute',
-            "country": 'India',
-            "grade": '8cgp',
-            "description": ['hello there', 'how are you?']
-        }
-    ]
-
     def __init__(self):
         super().__init__(
-            first_name="Indrajit",
-            family_name="Ghosh",
-            address=["8th Mile Mysore Road, Pin-560 059", "Bangalore, India"],
-            mobile="(+91) 9564 957618",
-            email="indrajitghosh912@gmail.com",
-            style="oldstyle",
+            first_name=Indrajit.first_name,
+            family_name=Indrajit.family_name,
+            address=Indrajit.address,
+            mobile=Indrajit.mobile,
+            email=Indrajit.email,
+            style="banking",
             font_size=12,
             photo_height=70,
             photo_thickness=0.9,
         )
 
+        # Education
         self.add_section(title="Education")
 
-        for edu in self.EDUCATIONS:
-            _years = edu['years']
-            _desc = edu['description']
-            if _desc:
-                if isinstance(_desc, list):
-                    _desc = r'\\'.join(_desc)
-
-            self.add_cventry(
-                years=_years,
+        for edu in Indrajit.education:
+            self.add_education(
+                years=edu['years'],
                 degree_or_job_title=edu['degree'],
-                institution_or_employer=edu['institution'],
-                localization=edu['country'],
-                grade=edu['grade'],
-                description=_desc
+                institution_or_employer=edu['institute'],
+                localization=edu['location']
             )
+
+        # Research
+        self.add_section(title="Research Interests")
+        self.add_raw_tex(Indrajit.research_interest)
+
+        # Publication
+        self.add_section(title="Publication")
+        for pub in Indrajit.publication:
+            preprint = (
+                '(\\emph{Pre-print})'
+                if pub['preprint'] == 1
+                else ''
+            )
+            if pub['collaborators']:  # Check if collaborators list is not empty
+                collaborators = ", ".join(pub['collaborators'])
+                collaborators = f" (with {collaborators})"
+            else:
+                collaborators = ""
+
+            tex_line = (
+                preprint +
+                r" \emph{"
+                + pub['title']
+                + "}"
+                + r"{" + collaborators + r"}, "
+                + r'\textbf{'
+                + pub['year']
+                + r"}, "
+                + r"\href{" + pub['url']['link'] + r"}"
+                + r"{" + pub['url']['link-text'] + r"}"
+            )
+
+            self.add_cvlistitem(tex_line)
+
+        # Fellowship
+        self.add_section(title="Fellowships and Achievements")
+        for fellowship in Indrajit.fellowship_achievement:
+            self.add_cvlistitem(fellowship['description'])
+
+        # Contributed Talks
+        self.add_section(title="Contributed Talks")
+        for talk in Indrajit.contri_talks:
+            desc = (
+                r"\cvlistitem{"
+                + f"Venue: {talk['venue']}" + "}"
+                r"\cvlistitem{"
+                + r"Website: \texttt{" 
+                + r"\href{"
+                + talk['website']['text'] 
+                + "}{"
+                + talk['website']['url'] + "}}"
+                + "}"
+            )
+            self.add_cventry(
+                years=talk['date'],
+                degree_or_job_title=talk['institute'],
+                institution_or_employer=talk['title'],
+                localization=talk['country'],
+                description=desc
+            )
+    
 
 
 
