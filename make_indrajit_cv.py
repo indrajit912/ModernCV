@@ -9,7 +9,7 @@
 from curriculumvitae import CurriculumVitae
 from main import setup_tex_dir
 from pathlib import Path
-import os, sys
+import os, sys, re
 from indrajit import Indrajit
 
 def _get_weblink_tex(url:str, url_text:str=None):
@@ -23,6 +23,46 @@ def _get_weblink_tex(url:str, url_text:str=None):
     return f"\\texttt{{\\href{{{url}}}{{{url_text}}}}}"
 
 
+def latex_escape(text:str):
+    """
+    This function accepts plain text and return the TeX escaped text.
+    Parameter:
+    ----------
+        `text`: `str`, a plain text message; This msg should not be any 
+                        standard LaTeX command such as `\begin{document}`.
+    
+    Returns:
+    --------
+        `str`; the message escaped to paste it into a `.tex` file
+    """
+    tex_conversion = {
+        '&': r'\&',
+        '%': r'\%',
+        '$': r'\$',
+        '#': r'\#',
+        '_': r'\_',
+        '{': r'\{',
+        '}': r'\}',
+        '~': r'\textasciitilde{}',
+        '^': r'\^{}',
+        '\\': r'\textbackslash{}',
+        '<': r'\textless{}',
+        '>': r'\textgreater{}',
+    }
+
+    regex = re.compile(
+        '|'.join(
+            re.escape(str(key)) for key in sorted(
+                tex_conversion.keys(), key=lambda item : -len(item)
+            )
+        )
+    )
+
+    return regex.sub(
+        lambda match: tex_conversion[match.group()], text
+    )
+
+
 class IndrajitCV(CurriculumVitae):
 
     def __init__(self):
@@ -31,7 +71,7 @@ class IndrajitCV(CurriculumVitae):
             family_name=Indrajit.family_name,
             address=Indrajit.address,
             mobile=Indrajit.mobile,
-            email=Indrajit.email,
+            email=latex_escape(Indrajit.email),
             style="banking",
             color="blue",
             font_size=10,

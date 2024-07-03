@@ -7,7 +7,7 @@ class Indrajit:
     family_name = "Ghosh"
     address = ["8th Mile Mysore Road, RVCE Post", "Bangalore 560 059, India"]
     mobile = "(+91) 9564 957618"
-    email = "indrajitghosh912@gmail.com"
+    email = "rs_math1902@isibang.ac.in"
     homepage = "https://indrajitghosh.onrender.com/"
 
     education = [
@@ -73,7 +73,7 @@ class Indrajit:
     contri_talks = [
         {
             'title': "Workshop on Completely Positive Maps",
-            'date': "Jan 15 -- Apr 29, 2024",
+            'date': "Jan 15 -- Jun 04, 2024",
             'institute': "Indian Statistical Institute Bangalore",
             'country': "Bangalore, India",
             'venue': "Stat-Math Unit, ISI",
