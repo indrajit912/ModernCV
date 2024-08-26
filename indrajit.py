@@ -35,11 +35,12 @@ class Indrajit:
     
     publication = [
         {
+            'authors': ["Me", "S. Nayak"],
             'title': "Algebraic aspects and functoriality of the set of affiliated operators",
-            'collaborators': ["S. Nayak"],
-            'year': "2023",
-            'url': {'link': "https://arxiv.org/abs/2311.16170", 'link-text': "arXiv:2311.16170"},
-            'preprint': 1
+            'status': "(accepted for publication in International Mathematics Research Notices, 2024)", # For example 'pre-print, 2023'
+            'links': [
+                {'link': "https://arxiv.org/abs/2311.16170", 'link-text': "arXiv:2311.16170"}
+            ]
         }
     ]
     

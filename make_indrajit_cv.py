@@ -95,30 +95,29 @@ class IndrajitCV(CurriculumVitae):
         self.add_raw_tex(Indrajit.research_interest)
 
         # Publication
-        self.add_section(title="Publication")
+        self.add_section(title="Publications")
         for pub in Indrajit.publication:
-            preprint = (
-                '(\\emph{Pre-print}) '
-                if pub['preprint'] == 1
-                else ''
+            authors = [
+                r"\textbf{I. Ghosh}" if name == "Me" else name
+                for name in pub['authors']
+            ]
+            authors = ', '.join(authors)
+            pub_links = ', '.join(
+                f"[\\href{{{item['link']}}}{{\\small {item['link-text']} }}]"
+                for item in pub['links']
             )
-            if pub['collaborators']:  # Check if collaborators list is not empty
-                collaborators = ", ".join(pub['collaborators'])
-                collaborators = f" (with {collaborators})"
-            else:
-                collaborators = ""
 
             tex_line = (
-                preprint +
-                r"\emph{"
+                authors 
+                + "; "
+                + r"\emph{"
                 + pub['title']
-                + "}"
-                + r"{" + collaborators + r"}, "
-                + r'\textbf{'
-                + pub['year']
-                + r"}, "
-                + r"\href{" + pub['url']['link'] + r"}"
-                + r"{" + pub['url']['link-text'] + r"}"
+                + "}, "
+                + pub['status']
+                + "."
+                + "\n"
+                + r"\newline"
+                + pub_links
             )
 
             self.add_cvlistitem(tex_line)
