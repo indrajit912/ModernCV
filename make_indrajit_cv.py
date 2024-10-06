@@ -103,7 +103,7 @@ class IndrajitCV(CurriculumVitae):
             ]
             authors = ', '.join(authors)
             pub_links = ', '.join(
-                f"[\\href{{{item['link']}}}{{\\small {item['link-text']} }}]"
+                f"[\\href{{{item['link']}}}{{\\small {item['link-text']}}}]"
                 for item in pub['links']
             )
 

@@ -37,8 +37,9 @@ class Indrajit:
         {
             'authors': ["Me", "S. Nayak"],
             'title': "Algebraic aspects and functoriality of the set of affiliated operators",
-            'status': "(accepted for publication in International Mathematics Research Notices, 2024)", # For example 'pre-print, 2023'
+            'status': "International Mathematics Research Notices, rnae203, 2024", # For example 'pre-print, 2023'
             'links': [
+                {'link': "https://doi.org/10.1093/imrn/rnae203", 'link-text': "DOI"},
                 {'link': "https://arxiv.org/abs/2311.16170", 'link-text': "arXiv:2311.16170"}
             ]
         }
@@ -151,6 +152,14 @@ class Indrajit:
 
 
     conferences = [
+        {
+            'title': "Noncommutative Mathematics and Applications (NCMA)",
+            'date': "Oct 24 -- 26, 2024",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India",
+            'venue': "Stat-Math Unit, ISI",
+            'website': {'url': "https://www.isibang.ac.in/\\textasciitilde jay/NC/NC.html", 'url_text': ''}
+        },
         {
             'title': "Young Mathematicians in Operator Algebras",
             'date': "Feb 26 -- Mar 02, 2024",
