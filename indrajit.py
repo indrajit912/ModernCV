@@ -37,7 +37,7 @@ class Indrajit:
         {
             'authors': ["Me", "S. Nayak"],
             'title': "Algebraic aspects and functoriality of the set of affiliated operators",
-            'status': "International Mathematics Research Notices, rnae203, 2024", # For example 'pre-print, 2023'
+            'status': "International Mathematics Research Notices, Volume 2024, Issue 21, Nov 2024, Pages 13525-13562", # For example 'pre-print, 2023'
             'links': [
                 {'link': "https://doi.org/10.1093/imrn/rnae203", 'link-text': "DOI"},
                 {'link': "https://arxiv.org/abs/2311.16170", 'link-text': "arXiv:2311.16170"}
