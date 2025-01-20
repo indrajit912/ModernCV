@@ -261,19 +261,25 @@ class Indrajit:
 
     references = [
         {
-            'name': "Dr. Soumyashant Nayak",
+            'name': "Prof. Soumyashant Nayak",
             'email': "soumyashant@isibang.ac.com",
             'designation': "Assistant Professor",
             'address': "Office A-14, Stat-Math Unit, Indian Statistical Institute Bangalore"
         },
         {
-            'name': "Dr. Nisith Chandra Das",
+            'name': "Prof. B.V. Rajarama Bhat",
+            'email': "bvrajaramabhat@gmail.com",
+            'designation': "Professor",
+            'address': "Stat-Math Unit, Indian Statistical Institute Bangalore"
+        },
+        {
+            'name': "Prof. Nisith Chandra Das",
             'email': "dasnisith@gmail.com",
             'designation': "Associate Professor",
             'address': "Department Of Mathematics, Barasat Govt. College, West Bengal, India"
         },
         {
-            'name': "Dr. Atasi Deb Ray",
+            'name': "Prof. Atasi Deb Ray",
             'email': "adrpm@caluniv.ac.in",
             'designation': "Associate Professor",
             'address': "Department Of Pure Mathematics, University of Calcutta"
