@@ -42,6 +42,12 @@ class Indrajit:
                 {'link': "https://doi.org/10.1093/imrn/rnae203", 'link-text': "DOI"},
                 {'link': "https://arxiv.org/abs/2311.16170", 'link-text': "arXiv:2311.16170"}
             ]
+        },
+        {
+            'authors': ["Me", "S. Nayak"],
+            'title': "Affiliated operators for monotone $\sigma$-complete $C^*$-algebras",
+            'status': "pre-print, under preparation, 2025 ", # For example 'pre-print, 2023'
+            'links': []
         }
     ]
     
