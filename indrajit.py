@@ -36,6 +36,12 @@ class Indrajit:
     publication = [
         {
             'authors': ["Me", "S. Nayak"],
+            'title': "Affiliated operators for monotone $\sigma$-complete $C^*$-algebras",
+            'status': "pre-print, under preparation, 2025 ", # For example 'pre-print, 2023'
+            'links': []
+        },
+        {
+            'authors': ["Me", "S. Nayak"],
             'title': "Algebraic aspects and functoriality of the set of affiliated operators",
             'status': "International Mathematics Research Notices, Volume 2024, Issue 21, Nov 2024, Pages 13525-13562", # For example 'pre-print, 2023'
             'links': [
@@ -43,12 +49,6 @@ class Indrajit:
                 {'link': "https://arxiv.org/abs/2311.16170", 'link-text': "arXiv:2311.16170"}
             ]
         },
-        {
-            'authors': ["Me", "S. Nayak"],
-            'title': "Affiliated operators for monotone $\sigma$-complete $C^*$-algebras",
-            'status': "pre-print, under preparation, 2025 ", # For example 'pre-print, 2023'
-            'links': []
-        }
     ]
     
     fellowship_achievement = [
@@ -120,7 +120,7 @@ class Indrajit:
     teaching_experience = [
         {
             'role': "Teaching Assistant",
-            'year': "Jan 01 -- Apr 15, 2025",
+            'year': "Jan 01, 2025 -- Present",
             'institute': "Indian Statistical Institute Bangalore",
             'country': "Bangalore, India",
             'course': "Optimization (B. Math III)",
