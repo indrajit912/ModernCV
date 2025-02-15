@@ -3,6 +3,7 @@
 ### Python ###
 .sync/
 tex_dir/
+indra_cv/
 test_tex/
 templates/
 config.yml
