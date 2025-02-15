@@ -80,6 +80,15 @@ class Indrajit:
 
     contri_talks = [
         {
+            'title': "PDF-RS Annual Symposium 2025",
+            'date': "Jan 29, 2025",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India",
+            'venue': "Platinum Jubilee Auditoriam, ISI",
+            'website': {'url': "https://indrajitghosh.onrender.com/misc/isi_symposium_25", 'url_text': 'Click here'},
+            'abstract': {'url':"https://indrajitghosh.onrender.com/misc/isi_symposium_25\#indrajit-abs", 'url_text': 'Click here'}
+        },
+        {
             'title': "Workshop on Completely Positive Maps",
             'date': "Jan 15 -- Jun 04, 2024",
             'institute': "Indian Statistical Institute Bangalore",
@@ -111,7 +120,16 @@ class Indrajit:
     teaching_experience = [
         {
             'role': "Teaching Assistant",
-            'year': "Jan 2024 -- Present",
+            'year': "Jan 01 -- Apr 15, 2025",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India",
+            'course': "Optimization (B. Math III)",
+            'instructor': "Soumyashant Nayak",
+            'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/optimization_even2025.html"
+        },
+        {
+            'role': "Teaching Assistant",
+            'year': "Jan 2024 -- Apr 2024",
             'institute': "Indian Statistical Institute Bangalore",
             'country': "Bangalore, India",
             'course': "A Course in Harmonic Analysis (B. Math III)",
@@ -231,37 +249,13 @@ class Indrajit:
             'website': {'url': "https://ifcam.sciencesconf.org/", 'url_text': ''},
         },
         {
-            'title': "Advanced Instructional School - Advanced Linear Algebra",
-            'date': "May 09 -- 28, 2022",
-            'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India",
-            'venue': "Stat-Math Unit, ISI",
-            'website': {'url': "https://www.atmschools.org/school/2022/AIS/ala", 'url_text': ''},
-        },
-        {
             'title': "Quantum Probability and Infinite Dimensional Analysis",
             'date': "Jan 17 -- 20, 2022",
             'institute': "Indian Statistical Institute Bangalore",
             'country': "Bangalore, India",
             'venue': "Stat-Math Unit, ISI",
             'website': {'url': "https://www.isibang.ac.in/~statmath/conferences/QPIDA-2022.html", 'url_text': ''},
-        },
-        {
-            'title': "IWM Mini Course on Approximate Solutions of Operator Equations",
-            'date': "Nov 2021",
-            'institute': "Indian Women and Mathematics",
-            'country': "India",
-            'venue': "Online",
-            'website': {'url': "https://drive.google.com/file/d/1FYd-6j\_hwOMfc2Z9NIQiv2ZqSnF859J4/view", 'url_text': ''},
-        },
-        {
-            'title': "Online Workshop on Algebraic Number Theory",
-            'date': "Sep 2020",
-            'institute': "Assam University",
-            'country': "Assam, India",
-            'venue': "Online",
-            'website': {},
-        },
+        }
     ]
 
 
