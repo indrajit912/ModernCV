@@ -61,6 +61,7 @@ class CurriculumVitae:
         address:list=None,
         mobile:str=None,
         email:str=None,
+        homepage:str=None,
         *,
         font_size:int=None,
         paper_size:str=None,
@@ -80,6 +81,7 @@ class CurriculumVitae:
         self._address = self.default_address if address is None else address
         self._mobile = self.default_mobile if mobile is None else mobile
         self._email = self.default_email if email is None else email
+        self._homepage = '' if homepage is None else homepage
 
         self._fontsize = self.default_font_size if font_size is None else font_size
         self._papersize = self.default_paper_size if paper_size is None else paper_size
@@ -134,6 +136,14 @@ class CurriculumVitae:
     @email.setter
     def email(self, new):
         self._email = new
+    
+    @property
+    def homepage(self):
+        return self._homepage
+    
+    @homepage.setter
+    def homepage(self, new):
+        self._homepage = new
 
     @property
     def photo(self):
@@ -256,6 +266,13 @@ class CurriculumVitae:
             r"\usepackage[scale="+ self._scale.__str__() + r"]{geometry}" + 
             "\n\n"
         )
+        packages += r"""
+%% To avoid adding 'http' in front of https links.
+\renewcommand*{\httplink}[2][]{%
+  \ifthenelse{\equal{#1}{}}%
+    {\href{#2}{#2}}%
+    {\href{#2}{#1}}}
+"""
         preamble += packages
 
         arguments = (
@@ -278,6 +295,8 @@ class CurriculumVitae:
             "pt]{" + self._photo + r"}" + # (Pic Height, Thickness of the frame)
             "\n\n"
         )
+        if self._homepage:
+            arguments += r"\homepage{" + self._homepage + r"}{Homepage}"
         preamble += arguments
 
         preamble += r"\newcommand{\Csharp}{{\settoheight{\dimen0}{C}C\kern-.05em \resizebox{!}{\dimen0}{\raisebox{\depth}{\textbf{\#}}}}}"

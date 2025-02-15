@@ -72,6 +72,7 @@ class IndrajitCV(CurriculumVitae):
             address=Indrajit.address,
             mobile=Indrajit.mobile,
             email=latex_escape(Indrajit.email),
+            homepage=Indrajit.homepage,
             style="banking",
             color="blue",
             font_size=10,
