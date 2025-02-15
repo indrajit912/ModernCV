@@ -69,7 +69,8 @@ class CurriculumVitae:
         color:str=None,
         photo_height:float=None,
         photo_thickness:float=None,
-        colorlinks:bool=True
+        colorlinks:bool=True,
+        scale:float=0.87
     ):
         self._firstname = first_name
         self._familyname = family_name
@@ -88,6 +89,7 @@ class CurriculumVitae:
         self._photo_height = self.default_photo_height if photo_height is None else photo_height
         self._photo_thickness = self.default_photo_thickness if photo_thickness is None else photo_thickness
         self._colorlinks = colorlinks
+        self._scale = scale
 
         self._preamble = self.get_preamble()
         self._body = self.get_body()
@@ -189,6 +191,14 @@ class CurriculumVitae:
     def colorlinks(self, new:bool):
         self._colorlinks = new
 
+    @property
+    def scale(self):
+        return self._scale
+    
+    @scale.setter
+    def scale(self, new_scale_val:float):
+        self._scale = new_scale_val
+
 
     @property
     def text(self):
@@ -243,7 +253,7 @@ class CurriculumVitae:
 
         packages = (
             "\n" +
-            r"\usepackage[scale=0.75]{geometry}" + 
+            r"\usepackage[scale="+ self._scale.__str__() + r"]{geometry}" + 
             "\n\n"
         )
         preamble += packages

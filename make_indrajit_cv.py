@@ -77,6 +77,7 @@ class IndrajitCV(CurriculumVitae):
             font_size=10,
             photo_height=70,
             photo_thickness=0.9,
+            scale=0.7
         )
 
         # Education
