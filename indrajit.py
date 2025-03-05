@@ -80,6 +80,15 @@ class Indrajit:
 
     contri_talks = [
         {
+            'title': "Conference on Operator Algebra and Related Topics COART-2025",
+            'date': "Feb 24 -- 28, 2025",
+            'institute': "Indian Institute of Technology Bombay",
+            'country': "Bombay, India",
+            'venue': "Math Department, IIT",
+            'website': {'url': "https://sites.google.com/view/coart-2025iitb/home", 'url_text': 'Click here'},
+            'abstract': {}
+        },
+        {
             'title': "PDF-RS Annual Symposium 2025",
             'date': "Jan 29, 2025",
             'institute': "Indian Statistical Institute Bangalore",
