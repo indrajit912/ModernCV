@@ -282,15 +282,9 @@ class Indrajit:
             'address': "Stat-Math Unit, Indian Statistical Institute Bangalore"
         },
         {
-            'name': "Prof. Nisith Chandra Das",
-            'email': "dasnisith@gmail.com",
-            'designation': "Associate Professor",
-            'address': "Department Of Mathematics, Barasat Govt. College, West Bengal, India"
-        },
-        {
-            'name': "Prof. Atasi Deb Ray",
-            'email': "adrpm@caluniv.ac.in",
-            'designation': "Associate Professor",
-            'address': "Department Of Pure Mathematics, University of Calcutta"
-        },
+            'name': "Prof. Jaydeb Sarkar",
+            'email': "jaydeb@gmail.com",
+            'designation': "Professor",
+            'address': "Stat-Math Unit, Indian Statistical Institute Bangalore"
+        }
     ]
