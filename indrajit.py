@@ -80,6 +80,15 @@ class Indrajit:
 
     contri_talks = [
         {
+            'title': "Young Mathematicians in Operator Algebras",
+            'date': "Mar 24, 2025",
+            'institute': "Indian Statistical Institute Delhi",
+            'country': "Delhi, India",
+            'venue': "Stat-Math Unit, ISI",
+            'website': {},
+            'abstract': {}
+        },
+        {
             'title': "Conference on Operator Algebra and Related Topics COART-2025",
             'date': "Feb 24 -- 28, 2025",
             'institute': "Indian Institute of Technology Bombay",

@@ -140,18 +140,21 @@ class IndrajitCV(CurriculumVitae):
                 + r"\cvlistitem{"
                 + f"Venue: {talk['venue']}" 
                 + "}"
-                + "\n"
-                + r"\cvlistitem{Website: "
-                + _get_weblink_tex(url=talk['website']['url'], url_text=talk['website']['url_text'])
-                + "}"
             )
+            if 'website' in talk.keys() and talk['website']:
+                talk_desc += (
+                    "\n"
+                    + r"\cvlistitem{Website: "
+                    + _get_weblink_tex(url=talk['website']['url'], url_text=talk['website']['url_text'])
+                    + "}"
+                )
             if  'abstract' in talk.keys() and talk['abstract']:
                 talk_desc += (
                     "\n"
                     + r"\cvlistitem{Abstract: "
                     + _get_weblink_tex(url=talk['abstract']['url'], url_text=talk['abstract']['url_text'])
                     + "}"
-                    +"\n"
+                    + "\n"
                 )
             self.add_cventry(
                 years=talk['date'],
