@@ -6,7 +6,7 @@ class Indrajit:
     first_name = "Indrajit"
     family_name = "Ghosh"
     address = ["8th Mile Mysore Road, RVCE Post", "Bangalore 560 059, India"]
-    mobile = "(+91) 9564 957618"
+    mobile = None
     email = "rs_math1902@isibang.ac.in"
     homepage = "https://indrajitghosh.onrender.com/"
 
@@ -15,7 +15,9 @@ class Indrajit:
             'years': "Jul 2019 -- Present",
             'degree': "Philosophiae Doctorate in Mathematics",
             'institute': "Stat-Math Unit, Indian Statistical Institute Bangalore",
-            'location': "Bangalore, India"
+            'location': "Bangalore, India",
+            'grade': "Advisor: Dr. Soumyashant Nayak",
+            'description': "Thesis: On Algebraic Aspects and Functoriality of the Set of Unbounded Operators Affiliated with a von Neumann Algebra",
         },
         {
             'years': "2016 -- 2018",
@@ -31,7 +33,7 @@ class Indrajit:
         },
     ]
 
-    research_interest = r"Operator Algebras: von Neumann Algebras, Type $II_1$ Factors, $C^*$-Algebras; Operator Theory; Topology"
+    research_interest = r"Operator Algebras: von Neumann Algebras, Type $II_1$ Factors, $C^*$-Algebras; Functional Analysis"
     
     publication = [
         {

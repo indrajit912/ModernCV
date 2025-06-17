@@ -89,7 +89,10 @@ class IndrajitCV(CurriculumVitae):
                 years=edu['years'],
                 degree_or_job_title=edu['degree'],
                 institution_or_employer=edu['institute'],
-                localization=edu['location']
+                localization=edu['location'],
+                grade=edu['grade'] if 'grade' in edu else None,
+                description=edu['description'] if 'description' in edu else None,
+                spacing=0.7
             )
 
         # Research

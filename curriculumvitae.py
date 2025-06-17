@@ -44,7 +44,7 @@ class CurriculumVitae:
     default_style = 'classic' # available: 'casual' (default), 'classic', 'oldstyle' and 'banking'
     default_color = 'blue' # available: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
     default_address = ["Address line, Pin-XXXXXX", "Your State, Country"]
-    default_mobile = "(+91) xxxx xxxxxx"
+    default_mobile = None
     default_email = "someone@somewhere.com"
     default_photo = "indra.JPG"
     default_photo_height = 70
@@ -283,9 +283,13 @@ class CurriculumVitae:
             r"\title{" + self._title + r"}" + 
             "\n" + 
             r"\address{" + self._address[0] + r"}" + r"{" + self._address[1] + "}" +
-            "\n" + 
-            r"\mobile{" + self._mobile + r"}" + 
-            "\n" + 
+            "\n"
+          )
+        
+        if self._mobile:
+            arguments += r"\mobile{" + self._mobile + r"}" + "\n"
+        
+        arguments += (
             r"\email{" + self._email + r"}" + 
             "\n" + 
             r"\photo[" + 
