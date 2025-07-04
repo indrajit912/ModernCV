@@ -80,67 +80,87 @@ class Indrajit:
         }
     ]
 
+    ##########################################################
+    """
+    Contributed Talk
+    Sample entry:
+    {
+        'title': "PDF-RS Annual Symposium 2025",
+        'date': "Jan 29, 2025",
+        'institute': "Indian Statistical Institute Bangalore",
+        'country': "Bangalore, India",
+        'venue': "Platinum Jubilee Auditoriam, ISI",
+        'website': {'url': "https://indrajitghosh.onrender.com/misc/isi_symposium_25", 'url_text': 'Click here'},
+        'abstract': {'url':"https://indrajitghosh.onrender.com/misc/isi_symposium_25", 'url_text': 'Click here'}
+    }
+    """
+    ##########################################################
+
     contri_talks = [
+        {
+            'title': "Young Mathematicians in \(C^*\)-Algebras (YMC*A-2025)",
+            'date': "Jul 21-25, 2025",
+            'institute': "University of Southern Denmark",
+            'country': "Odense, Denmark"
+        },
         {
             'title': "Young Mathematicians in Operator Algebras",
             'date': "Mar 24, 2025",
             'institute': "Indian Statistical Institute Delhi",
-            'country': "Delhi, India",
-            'venue': "Stat-Math Unit, ISI",
-            'website': {},
-            'abstract': {}
+            'country': "Delhi, India"
         },
         {
-            'title': "Conference on Operator Algebra and Related Topics COART-2025",
+            'title': "Conference on Operator Algebra and Related Topics (COART-2025)",
             'date': "Feb 24 -- 28, 2025",
             'institute': "Indian Institute of Technology Bombay",
-            'country': "Bombay, India",
-            'venue': "Math Department, IIT",
-            'website': {'url': "https://sites.google.com/view/coart-2025iitb/home", 'url_text': 'Click here'},
-            'abstract': {}
+            'country': "Bombay, India"
         },
         {
             'title': "PDF-RS Annual Symposium 2025",
             'date': "Jan 29, 2025",
             'institute': "Indian Statistical Institute Bangalore",
             'country': "Bangalore, India",
-            'venue': "Platinum Jubilee Auditoriam, ISI",
-            'website': {'url': "https://indrajitghosh.onrender.com/misc/isi_symposium_25", 'url_text': 'Click here'},
-            'abstract': {'url':"https://indrajitghosh.onrender.com/misc/isi_symposium_25\#indrajit-abs", 'url_text': 'Click here'}
         },
         {
             'title': "Workshop on Completely Positive Maps",
             'date': "Jan 15 -- Jun 04, 2024",
             'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India",
-            'venue': "Stat-Math Unit, ISI",
-            'website': {'url': "https://indrajitghosh.onrender.com/teaching/isibc/intro_to_cp_even_2024.html", 'url_text': 'Click here'},
-            'abstract': {}
+            'country': "Bangalore, India"
         },
         {
             'title': "Young Mathematicians in Operator Algebras",
             'date': "Feb 27, 2024",
             'institute': "Indian Statistical Institute Delhi",
             'country': "Delhi, India",
-            'venue': "Stat-Math Unit, ISI",
-            'website': {'url': "https://sites.google.com/view/ymoa/home", 'url_text': ''},
-            'abstract': {'url':"https://sites.google.com/view/ymoa/talks?authuser=0", 'url_text': "Click here"}
         },
         {
             'title': "International Conference on Spectral and Approximation Theory",
             'date': "Nov 29, 2023",
             'institute': "Cochin University of Science and Technology",
-            'country': "Kerala, India",
-            'venue': "Department of Mathematics, CUSAT",
-            'website': {'url': "https://sites.google.com/view/icsat-23/", 'url_text': ''},
-            'abstract': {'url':"https://sites.google.com/view/icsat-23/abstracts?authuser=0", 'url_text': "Click here"}
+            'country': "Kerala, India"
         },
     ]
+
+    ###################################################################
+    """
+    Teaching Experience
+    Sample Entry:
+    {
+        'role': "Teaching Assistant",
+        'year': "Sep 21 -- Dec 23, 2021",
+        'institute': "Indian Statistical Institute Bangalore",
+        'country': "Bangalore, India",
+        'course': " Optimization (B. Math II)",
+        'instructor': "Soumyashant Nayak",
+        'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/optimization_odd_sem_2021.html"
+    },
+    """
+    ###################################################################
 
     teaching_experience = [
         {
             'role': "Teaching Assistant",
-            'year': "Jan 01, 2025 -- Present",
+            'year': "Jan 01 -- Apr 15, 2025",
             'institute': "Indian Statistical Institute Bangalore",
             'country': "Bangalore, India",
             'course': "Optimization (B. Math III)",
@@ -149,7 +169,7 @@ class Indrajit:
         },
         {
             'role': "Teaching Assistant",
-            'year': "Jan 2024 -- Apr 2024",
+            'year': "Jan -- Apr 2024",
             'institute': "Indian Statistical Institute Bangalore",
             'country': "Bangalore, India",
             'course': "A Course in Harmonic Analysis (B. Math III)",
@@ -194,108 +214,92 @@ class Indrajit:
         },
     ]
 
-
+    #################################################################
+    """
+    Conferences
+     Sample entry:
+      {
+          'title': "Noncommutative Mathematics and Applications (NCMA)",
+          'date': "Oct 24 -- 26, 2024",
+          'institute': "Indian Statistical Institute Bangalore",
+          'country': "Bangalore, India",
+          'venue': "Stat-Math Unit, ISI",
+          'website': {'url': "https://www.isibang.ac.in/~statmath/conferences/QPIDA-2022.html", 'url_text': ''},
+      }
+    """
+    #################################################################
     conferences = [
         {
             'title': "Noncommutative Mathematics and Applications (NCMA)",
             'date': "Oct 24 -- 26, 2024",
             'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India",
-            'venue': "Stat-Math Unit, ISI",
-            'website': {'url': "https://www.isibang.ac.in/\\textasciitilde jay/NC/NC.html", 'url_text': ''}
+            'country': "Bangalore, India"
         },
         {
             'title': "Young Mathematicians in Operator Algebras",
             'date': "Feb 26 -- Mar 02, 2024",
             'institute': "Indian Statistical Institute Delhi",
-            'country': "Delhi, India",
-            'venue': "Stat-Math Unit, ISI",
-            'website': {'url': "https://sites.google.com/view/ymoa/home", 'url_text': ''}
+            'country': "Delhi, India"
         },
         {
             'title': "International Conference on Spectral and Approximation Theory",
             'date': "Nov 27 -- 30, 2023",
             'institute': "Cochin University of Science and Technology",
-            'country': "Kerala, India",
-            'venue': "Department of Mathematics, CUSAT",
-            'website': {'url': "https://sites.google.com/view/icsat-23/", 'url_text': ''},
+            'country': "Kerala, India"
         },
         {
             'title': "Conference on Functional Analysis and Related Topics-2023",
             'date': "Feb 21 -- 25, 2023",
             'institute': "Indian Institute of Technology Bombay, India",
-            'country': "Bombay, India",
-            'venue': "Victor Menezes Convention Centre (VMCC), IIT Bombay",
-            'website': {'url': "https://sites.google.com/view/cfart-2023-iitb/", 'url_text': ''}
+            'country': "Bombay, India"
         },
         {
             'title': "Tomita-Takesaki Modular Theory",
             'date': "Jan 18 -- Apr 26, 2023",
             'institute': "Indian Statistical Institute, Bangalore, India",
             'country': "Bangalore, India",
-            'venue': "Stat-Math Unit, ISI",
-            'website': {'url': "https://www.isibang.ac.in/~soumyashant/teaching/MODULAR_THEORY-EVEN2023/CourseWebpage.html", 'url_text': 'Click here'},
         },
         {
             'title': "Ergodic Theory and Dynamical Systems",
             'date': "Dec 05 -- 16, 2022",
             'institute': "International Centre for Theoretical Sciences",
-            'country': "Bangalore, India",
-            'venue': "Ramanujan Lecture Hall (ICTS) and Online",
-            'website': {'url': "https://www.icts.res.in/program/ETDS2022", 'url_text': ''},
+            'country': "Bangalore, India"
         },
         {
-            'title': "Baby Steps Beyond the Horizon",
+            'title': "Baby Steps Beyond the Horizon (Online)",
             'date': "Aug 29 - Sep 02, 2022",
             'institute': "Institute of Mathematics Polish Academy of Sciences",
-            'country': "Warszawa, Poland",
-            'venue': "Online",
-            'website': {'url': "https://www.impan.pl/en/activities/banach-center/conferences/22-babysteps", 'url_text': ''},
+            'country': "Warszawa, Poland"
         },
         {
-            'title': "A Conference on Ergodic Theory and von-Neumann Algebra",
+            'title': "A Conference on Ergodic Theory and von-Neumann Algebra (Online)",
             'date': "Aug 04 -- 06, 2022",
             'institute': "National Institute of Science Education and Research",
-            'country': "Odisha, India",
-            'venue': "Online",
-            'website': {'url': "https://www.niser.ac.in/etvna", 'url_text': ''},
+            'country': "Odisha, India"
         },
         {
             'title': "IFCAM - Mathematical Aspects of Quantum Mechanics",
             'date': "Jun 01 -- 12, 2022",
             'institute': "Indian Institute of Science Bangalore",
-            'country': "Bangalore, India",
-            'venue': "Math Dept., IISc",
-            'website': {'url': "https://ifcam.sciencesconf.org/", 'url_text': ''},
+            'country': "Bangalore, India"
         },
         {
             'title': "Quantum Probability and Infinite Dimensional Analysis",
             'date': "Jan 17 -- 20, 2022",
             'institute': "Indian Statistical Institute Bangalore",
             'country': "Bangalore, India",
-            'venue': "Stat-Math Unit, ISI",
-            'website': {'url': "https://www.isibang.ac.in/~statmath/conferences/QPIDA-2022.html", 'url_text': ''},
         }
     ]
 
-
-    references = [
-        {
-            'name': "Prof. Soumyashant Nayak",
-            'email': "soumyashant@isibang.ac.com",
-            'designation': "Assistant Professor",
-            'address': "Office A-14, Stat-Math Unit, Indian Statistical Institute Bangalore"
-        },
-        {
-            'name': "Prof. B.V. Rajarama Bhat",
-            'email': "bvrajaramabhat@gmail.com",
-            'designation': "Professor",
-            'address': "Stat-Math Unit, Indian Statistical Institute Bangalore"
-        },
-        {
-            'name': "Prof. Jaydeb Sarkar",
-            'email': "jaydeb@gmail.com",
-            'designation': "Professor",
-            'address': "Stat-Math Unit, Indian Statistical Institute Bangalore"
-        }
-    ]
+    #################################################################
+    """
+    References:
+    {
+        'name': "Prof. Soumyashant Nayak",
+        'email': "soumyashant@isibang.ac.com",
+        'designation': "Assistant Professor",
+        'address': "Office A-14, Stat-Math Unit, Indian Statistical Institute Bangalore"
+    },
+    """
+    #################################################################
+    references = []

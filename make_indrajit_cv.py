@@ -138,12 +138,15 @@ class IndrajitCV(CurriculumVitae):
         # Contributed Talks
         self.add_section(title="Contributed Talks")
         for talk in Indrajit.contri_talks:
-            talk_desc = (
-                "\n"
-                + r"\cvlistitem{"
-                + f"Venue: {talk['venue']}" 
-                + "}"
-            )
+            talk_desc = ''
+            if 'venue' in talk.keys() and talk['venue']:
+                talk_desc += (
+                    "\n"
+                    + r"\cvlistitem{"
+                    + f"Venue: {talk['venue']}"
+                    + "}"
+                )
+
             if 'website' in talk.keys() and talk['website']:
                 talk_desc += (
                     "\n"
@@ -207,15 +210,17 @@ class IndrajitCV(CurriculumVitae):
             else:
                 conf_web = ''
                 
+            if 'venue' in conf and conf['venue']:
+                conf_desc = (
+                    "\n"
+                    + r"\cvlistitem{"
+                    + f"Venue: {conf['venue']}" 
+                    + "}"
+                    + conf_web
+                )
+            else:
+                conf_desc = ''
 
-            conf_desc = (
-                "\n"
-                + r"\cvlistitem{"
-                + f"Venue: {conf['venue']}" 
-                + "}"
-                + conf_web
-            )
-            
             self.add_cventry(
                 years=conf['date'],
                 degree_or_job_title=conf['institute'],
@@ -225,21 +230,23 @@ class IndrajitCV(CurriculumVitae):
             )
 
         # References
-        self.add_section(title="References")
-        for ref in Indrajit.references:
-            _tex = (
-                "\n"
-                + r"\textbf{"
-                + ref['name']
-                + "}"
-                + ", "
-                + "\\emph{" + ref['designation'] + "}"
-                + " | "
-                + ref['address']
-                + " | "
-                + "\\texttt{" + ref['email'] + "}"
-            )
-            self.add_cvlistitem(_tex)
+        # This section could be optional
+        if Indrajit.references:
+            self.add_section(title="References")
+            for ref in Indrajit.references:
+                _tex = (
+                    "\n"
+                    + r"\textbf{"
+                    + ref['name']
+                    + "}"
+                    + ", "
+                    + "\\emph{" + ref['designation'] + "}"
+                    + " | "
+                    + ref['address']
+                    + " | "
+                    + "\\texttt{" + ref['email'] + "}"
+                )
+                self.add_cvlistitem(_tex)
         
 
 
