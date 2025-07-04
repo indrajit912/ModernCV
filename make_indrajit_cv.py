@@ -169,33 +169,6 @@ class IndrajitCV(CurriculumVitae):
                 localization=talk['country'],
                 description=talk_desc
             )
-        
-        # Teaching Experiences
-        self.add_section(title="Teaching Experiences")
-        for teach in Indrajit.teaching_experience:
-            teach_desc = (
-                "\n"
-                + r"\cvlistitem{"
-                + "Course: " 
-                + _get_weblink_tex(
-                    url=teach['webpage'],
-                    url_text=teach['course']
-                )
-                + "}"
-                + "\n"
-                + r"\cvlistitem{Instructor: "
-                + teach['instructor']
-                + "}"
-            )
-
-            self.add_cventry(
-                years=teach['year'],
-                degree_or_job_title=teach['role'],
-                institution_or_employer=teach['institute'],
-                localization=teach['country'],
-                description=teach_desc
-            )
-
 
         # Conferences
         self.add_section(title="Conferences and Workshops Attended")
@@ -228,6 +201,33 @@ class IndrajitCV(CurriculumVitae):
                 localization=conf['country'],
                 description=conf_desc
             )
+        
+        # Teaching Experiences
+        self.add_section(title="Teaching Experiences")
+        for teach in Indrajit.teaching_experience:
+            teach_desc = (
+                "\n"
+                + r"\cvlistitem{"
+                + "Course: " 
+                + _get_weblink_tex(
+                    url=teach['webpage'],
+                    url_text=teach['course']
+                )
+                + "}"
+                + "\n"
+                + r"\cvlistitem{Instructor: "
+                + teach['instructor']
+                + "}"
+            )
+
+            self.add_cventry(
+                years=teach['year'],
+                degree_or_job_title=teach['role'],
+                institution_or_employer=teach['institute'],
+                localization=teach['country'],
+                description=teach_desc
+            )
+
 
         # References
         # This section could be optional

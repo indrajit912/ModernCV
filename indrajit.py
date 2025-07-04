@@ -99,13 +99,13 @@ class Indrajit:
     contri_talks = [
         {
             'title': "Young Mathematicians in \(C^*\)-Algebras (YMC*A-2025)",
-            'date': "Jul 21-25, 2025",
+            'date': "Jul 21 -- 25, 2025",
             'institute': "University of Southern Denmark",
             'country': "Odense, Denmark"
         },
         {
             'title': "Young Mathematicians in Operator Algebras",
-            'date': "Mar 24, 2025",
+            'date': "Mar 24 -- 28, 2025",
             'institute': "Indian Statistical Institute Delhi",
             'country': "Delhi, India"
         },
@@ -117,7 +117,7 @@ class Indrajit:
         },
         {
             'title': "PDF-RS Annual Symposium 2025",
-            'date': "Jan 29, 2025",
+            'date': "Jan 29 -- 31, 2025",
             'institute': "Indian Statistical Institute Bangalore",
             'country': "Bangalore, India",
         },
@@ -129,16 +129,76 @@ class Indrajit:
         },
         {
             'title': "Young Mathematicians in Operator Algebras",
-            'date': "Feb 27, 2024",
+            'date': "Feb 26 -- Mar 02, 2024",
             'institute': "Indian Statistical Institute Delhi",
             'country': "Delhi, India",
         },
         {
             'title': "International Conference on Spectral and Approximation Theory",
-            'date': "Nov 29, 2023",
+            'date': "Nov 27 -- 30, 2023",
             'institute': "Cochin University of Science and Technology",
             'country': "Kerala, India"
         },
+    ]
+
+    
+    #################################################################
+    """
+    Conferences
+     Sample entry:
+      {
+          'title': "Noncommutative Mathematics and Applications (NCMA)",
+          'date': "Oct 24 -- 26, 2024",
+          'institute': "Indian Statistical Institute Bangalore",
+          'country': "Bangalore, India",
+          'venue': "Stat-Math Unit, ISI",
+          'website': {'url': "https://www.isibang.ac.in/~statmath/conferences/QPIDA-2022.html", 'url_text': ''},
+      }
+    """
+    #################################################################
+    conferences = [
+        {
+            'title': "Noncommutative Mathematics and Applications (NCMA)",
+            'date': "Oct 24 -- 26, 2024",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India"
+        },
+        {
+            'title': "Conference on Functional Analysis and Related Topics-2023",
+            'date': "Feb 21 -- 25, 2023",
+            'institute': "Indian Institute of Technology Bombay, India",
+            'country': "Bombay, India"
+        },
+        {
+            'title': "Ergodic Theory and Dynamical Systems",
+            'date': "Dec 05 -- 16, 2022",
+            'institute': "International Centre for Theoretical Sciences",
+            'country': "Bangalore, India"
+        },
+        {
+            'title': "Baby Steps Beyond the Horizon (Online)",
+            'date': "Aug 29 - Sep 02, 2022",
+            'institute': "Institute of Mathematics Polish Academy of Sciences",
+            'country': "Warszawa, Poland"
+        },
+        {
+            'title': "A Conference on Ergodic Theory and von-Neumann Algebra (Online)",
+            'date': "Aug 04 -- 06, 2022",
+            'institute': "National Institute of Science Education and Research",
+            'country': "Odisha, India"
+        },
+        {
+            'title': "IFCAM - Mathematical Aspects of Quantum Mechanics",
+            'date': "Jun 01 -- 12, 2022",
+            'institute': "Indian Institute of Science Bangalore",
+            'country': "Bangalore, India"
+        },
+        {
+            'title': "Quantum Probability and Infinite Dimensional Analysis",
+            'date': "Jan 17 -- 20, 2022",
+            'institute': "Indian Statistical Institute Bangalore",
+            'country': "Bangalore, India",
+        }
     ]
 
     ###################################################################
@@ -212,83 +272,6 @@ class Indrajit:
             'instructor': "Soumyashant Nayak",
             'webpage': "https://indrajitghosh.onrender.com/teaching/isibc/optimization_odd_sem_2021.html"
         },
-    ]
-
-    #################################################################
-    """
-    Conferences
-     Sample entry:
-      {
-          'title': "Noncommutative Mathematics and Applications (NCMA)",
-          'date': "Oct 24 -- 26, 2024",
-          'institute': "Indian Statistical Institute Bangalore",
-          'country': "Bangalore, India",
-          'venue': "Stat-Math Unit, ISI",
-          'website': {'url': "https://www.isibang.ac.in/~statmath/conferences/QPIDA-2022.html", 'url_text': ''},
-      }
-    """
-    #################################################################
-    conferences = [
-        {
-            'title': "Noncommutative Mathematics and Applications (NCMA)",
-            'date': "Oct 24 -- 26, 2024",
-            'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India"
-        },
-        {
-            'title': "Young Mathematicians in Operator Algebras",
-            'date': "Feb 26 -- Mar 02, 2024",
-            'institute': "Indian Statistical Institute Delhi",
-            'country': "Delhi, India"
-        },
-        {
-            'title': "International Conference on Spectral and Approximation Theory",
-            'date': "Nov 27 -- 30, 2023",
-            'institute': "Cochin University of Science and Technology",
-            'country': "Kerala, India"
-        },
-        {
-            'title': "Conference on Functional Analysis and Related Topics-2023",
-            'date': "Feb 21 -- 25, 2023",
-            'institute': "Indian Institute of Technology Bombay, India",
-            'country': "Bombay, India"
-        },
-        {
-            'title': "Tomita-Takesaki Modular Theory",
-            'date': "Jan 18 -- Apr 26, 2023",
-            'institute': "Indian Statistical Institute, Bangalore, India",
-            'country': "Bangalore, India",
-        },
-        {
-            'title': "Ergodic Theory and Dynamical Systems",
-            'date': "Dec 05 -- 16, 2022",
-            'institute': "International Centre for Theoretical Sciences",
-            'country': "Bangalore, India"
-        },
-        {
-            'title': "Baby Steps Beyond the Horizon (Online)",
-            'date': "Aug 29 - Sep 02, 2022",
-            'institute': "Institute of Mathematics Polish Academy of Sciences",
-            'country': "Warszawa, Poland"
-        },
-        {
-            'title': "A Conference on Ergodic Theory and von-Neumann Algebra (Online)",
-            'date': "Aug 04 -- 06, 2022",
-            'institute': "National Institute of Science Education and Research",
-            'country': "Odisha, India"
-        },
-        {
-            'title': "IFCAM - Mathematical Aspects of Quantum Mechanics",
-            'date': "Jun 01 -- 12, 2022",
-            'institute': "Indian Institute of Science Bangalore",
-            'country': "Bangalore, India"
-        },
-        {
-            'title': "Quantum Probability and Infinite Dimensional Analysis",
-            'date': "Jan 17 -- 20, 2022",
-            'institute': "Indian Statistical Institute Bangalore",
-            'country': "Bangalore, India",
-        }
     ]
 
     #################################################################
