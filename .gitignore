@@ -4,6 +4,7 @@
 .sync/
 tex_dir/
 indra_cv/
+cv_database/
 test_tex/
 templates/
 config.yml
