@@ -251,7 +251,7 @@ class IndrajitCV(CurriculumVitae):
 
 
 def main():
-    tex_dir = Path.cwd() / 'indra_cv'
+    tex_dir = Path.home() / "Downloads" / 'indra_cv'
     indrajit = IndrajitCV()
 
     setup_tex_dir(tex_dir=tex_dir, cvObj=indrajit)
