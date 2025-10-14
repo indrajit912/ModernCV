@@ -12,7 +12,7 @@ class Indrajit:
 
     education = [
         {
-            'years': "Jul 2019 -- Present",
+            'years': "Jul 2019 -- May 2025",
             'degree': "Philosophiae Doctorate in Mathematics",
             'institute': "Stat-Math Unit, Indian Statistical Institute Bangalore",
             'location': "Bangalore, India",
@@ -80,6 +80,16 @@ class Indrajit:
         }
     ]
 
+    # Invited Talks
+    invited_talks = [
+        {
+            'title': "Young Mathematicians in Operator Algebras",
+            'date': "Mar 24 -- 28, 2025",
+            'institute': "Indian Statistical Institute Delhi",
+            'country': "Delhi, India"
+        },
+    ]
+
     ##########################################################
     """
     Contributed Talk
@@ -102,12 +112,6 @@ class Indrajit:
             'date': "Jul 21 -- 25, 2025",
             'institute': "University of Southern Denmark",
             'country': "Odense, Denmark"
-        },
-        {
-            'title': "Young Mathematicians in Operator Algebras",
-            'date': "Mar 24 -- 28, 2025",
-            'institute': "Indian Statistical Institute Delhi",
-            'country': "Delhi, India"
         },
         {
             'title': "Conference on Operator Algebra and Related Topics (COART-2025)",

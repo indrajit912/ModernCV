@@ -135,41 +135,14 @@ class IndrajitCV(CurriculumVitae):
         for fellowship in Indrajit.fellowship_achievement:
             self.add_cvlistitem(fellowship['description'])
 
+        # Invited Talks
+        self.add_section(title="Invited Talks")
+        self._print_talks(Indrajit.invited_talks)
+
         # Contributed Talks
         self.add_section(title="Contributed Talks")
-        for talk in Indrajit.contri_talks:
-            talk_desc = ''
-            if 'venue' in talk.keys() and talk['venue']:
-                talk_desc += (
-                    "\n"
-                    + r"\cvlistitem{"
-                    + f"Venue: {talk['venue']}"
-                    + "}"
-                )
-
-            if 'website' in talk.keys() and talk['website']:
-                talk_desc += (
-                    "\n"
-                    + r"\cvlistitem{Website: "
-                    + _get_weblink_tex(url=talk['website']['url'], url_text=talk['website']['url_text'])
-                    + "}"
-                )
-            if  'abstract' in talk.keys() and talk['abstract']:
-                talk_desc += (
-                    "\n"
-                    + r"\cvlistitem{Abstract: "
-                    + _get_weblink_tex(url=talk['abstract']['url'], url_text=talk['abstract']['url_text'])
-                    + "}"
-                    + "\n"
-                )
-            self.add_cventry(
-                years=talk['date'],
-                degree_or_job_title=talk['institute'],
-                institution_or_employer=talk['title'],
-                localization=talk['country'],
-                description=talk_desc
-            )
-
+        self._print_talks(Indrajit.contri_talks)
+        
         # Conferences
         self.add_section(title="Conferences and Workshops Attended")
         for conf in Indrajit.conferences:
@@ -247,6 +220,43 @@ class IndrajitCV(CurriculumVitae):
                     + "\\texttt{" + ref['email'] + "}"
                 )
                 self.add_cvlistitem(_tex)
+    
+
+    def _print_talks(self, talks:list):
+        """Prints the talks on the CV"""
+        for talk in talks:
+            talk_desc = ''
+            if 'venue' in talk.keys() and talk['venue']:
+                talk_desc += (
+                    "\n"
+                    + r"\cvlistitem{"
+                    + f"Venue: {talk['venue']}"
+                    + "}"
+                )
+
+            if 'website' in talk.keys() and talk['website']:
+                talk_desc += (
+                    "\n"
+                    + r"\cvlistitem{Website: "
+                    + _get_weblink_tex(url=talk['website']['url'], url_text=talk['website']['url_text'])
+                    + "}"
+                )
+            if  'abstract' in talk.keys() and talk['abstract']:
+                talk_desc += (
+                    "\n"
+                    + r"\cvlistitem{Abstract: "
+                    + _get_weblink_tex(url=talk['abstract']['url'], url_text=talk['abstract']['url_text'])
+                    + "}"
+                    + "\n"
+                )
+            self.add_cventry(
+                years=talk['date'],
+                degree_or_job_title=talk['institute'],
+                institution_or_employer=talk['title'],
+                localization=talk['country'],
+                description=talk_desc
+            )
+
         
 
 
