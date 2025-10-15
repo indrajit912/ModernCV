@@ -12,7 +12,7 @@ class Indrajit:
 
     education = [
         {
-            'years': "Jul 2019 -- May 2025",
+            'years': "Jul 2019 -- Oct 2025",
             'degree': "Philosophiae Doctorate in Mathematics",
             'institute': "Stat-Math Unit, Indian Statistical Institute Bangalore",
             'location': "Bangalore, India",
