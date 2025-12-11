@@ -81,6 +81,16 @@ class IndrajitCV(CurriculumVitae):
             scale=0.87
         )
 
+        # Employment
+        self.add_section(title="Employment")
+        for emp in Indrajit.employment:
+            self.add_cventry(
+                years=emp['years'],
+                degree_or_job_title=emp['position'],
+                institution_or_employer=emp['institute'],
+                localization=emp['location']
+            )
+
         # Education
         self.add_section(title="Education")
 

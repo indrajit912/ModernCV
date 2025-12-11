@@ -5,10 +5,19 @@
 class Indrajit:
     first_name = "Indrajit"
     family_name = "Ghosh"
-    address = ["8th Mile Mysore Road, RVCE Post", "Bangalore 560 059, India"]
+    address = ["Dept. of Mathematics, IIT Madras", "Chennai 600 036, India"]
     mobile = None
-    email = "rs_math1902@isibang.ac.in"
+    email = "indrajitghosh2014@gmail.com"
     homepage = "https://indrajitghosh.onrender.com/"
+
+    employment = [
+        {
+            'years': "Nov 2025 -- Present",
+            'position': "Postdoctoral Researcher",
+            'institute': "Indian Institute of Technology Madras",
+            'location': "Chennai, India"
+        }
+    ]
 
     education = [
         {
@@ -36,12 +45,6 @@ class Indrajit:
     research_interest = r"Operator Algebras: von Neumann Algebras, Type $II_1$ Factors, $C^*$-Algebras; Functional Analysis"
     
     publication = [
-        {
-            'authors': ["Me", "S. Nayak"],
-            'title': "Affiliated operators for monotone $\sigma$-complete $C^*$-algebras",
-            'status': "pre-print, under preparation, 2025 ", # For example 'pre-print, 2023'
-            'links': []
-        },
         {
             'authors': ["Me", "S. Nayak"],
             'title': "Algebraic aspects and functoriality of the set of affiliated operators",
