@@ -46,6 +46,18 @@ class Indrajit:
     
     publication = [
         {
+            'authors': ["Me", "K. Mukherjee"],
+            'title': "A Characterization of Properly Infinite von Neumann Algebras via Affiliated Operators",
+            'status': "Ongoing", # For example 'pre-print, 2023'
+            'links': []
+        },
+        {
+            'authors': ["Me", "S. Nayak"],
+            'title': "Affiliated Operators for Monotone $\sigma$-Complete $C^*$-Algebras",
+            'status': "Ongoing", # For example 'pre-print, 2023'
+            'links': []
+        },
+        {
             'authors': ["Me", "S. Nayak"],
             'title': "Algebraic aspects and functoriality of the set of affiliated operators",
             'status': "International Mathematics Research Notices, Volume 2024, Issue 21, Nov 2024, Pages 13525-13562", # For example 'pre-print, 2023'
