@@ -5,9 +5,9 @@
 class Indrajit:
     first_name = "Indrajit"
     family_name = "Ghosh"
-    address = ["Dept. of Mathematics, IIT Madras", "Chennai 600 036, India"]
+    address = ["Department of Mathematics, IIT Madras", "Chennai 600 036, India"]
     mobile = None
-    email = "indrajitghosh2014@gmail.com"
+    email = "ic44000@imail.iitm.ac.in"
     homepage = "https://indrajitghosh.onrender.com/"
 
     employment = [
@@ -42,21 +42,9 @@ class Indrajit:
         },
     ]
 
-    research_interest = r"Operator Algebras: von Neumann Algebras, Type $II_1$ Factors, $C^*$-Algebras; Functional Analysis"
+    research_interest = r"Operator Algebras: von Neumann Algebras, Properly Infinite Factors, $C^*$-Algebras; Functional Analysis"
     
     publication = [
-        {
-            'authors': ["Me", "K. Mukherjee"],
-            'title': "A Characterization of Properly Infinite von Neumann Algebras via Affiliated Operators",
-            'status': "Ongoing", # For example 'pre-print, 2023'
-            'links': []
-        },
-        {
-            'authors': ["Me", "S. Nayak"],
-            'title': "Affiliated Operators for Monotone $\sigma$-Complete $C^*$-Algebras",
-            'status': "Ongoing", # For example 'pre-print, 2023'
-            'links': []
-        },
         {
             'authors': ["Me", "S. Nayak"],
             'title': "Algebraic aspects and functoriality of the set of affiliated operators",
