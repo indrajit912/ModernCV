@@ -25,8 +25,8 @@ class Indrajit:
             'degree': "Philosophiae Doctorate in Mathematics",
             'institute': "Stat-Math Unit, Indian Statistical Institute Bangalore",
             'location': "Bangalore, India",
-            'grade': "Advisor: Dr. Soumyashant Nayak",
-            'description': "Thesis: On Algebraic Aspects and Functoriality of the Set of Unbounded Operators Affiliated with a von Neumann Algebra",
+            'grade': "",
+            'description': "Thesis: On Algebraic Aspects and Functoriality of the Set of Unbounded Operators Affiliated with a von Neumann Algebra\\\\Advisor: Dr. Soumyashant Nayak\\\\Defended On: Oct 15, 2025",
         },
         {
             'years': "2016 -- 2018",
@@ -45,6 +45,18 @@ class Indrajit:
     research_interest = r"Operator Algebras: von Neumann Algebras, Properly Infinite Factors, $C^*$-Algebras; Functional Analysis"
     
     publication = [
+        {
+            'authors': ["Me", "Kunal Mukherjee"],
+            'title': "A Characterization of Properly Infinite von Neumann Algebras",
+            'status': "(Under preparation)", # For example 'pre-print, 2023'
+            'links': []
+        },
+        {
+            'authors': ["Me"],
+            'title': "A Space Free Representation of Affiliated Operators",
+            'status': "pre-print, 2025", # For example 'pre-print, 2023'
+            'links': []
+        },
         {
             'authors': ["Me", "S. Nayak"],
             'title': "Algebraic aspects and functoriality of the set of affiliated operators",
